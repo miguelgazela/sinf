@@ -615,4 +615,9 @@ table.fc-border-separate {
 	_overflow: hidden;
 	}
 	
+div#miniCalendar.span2{
+	left: -20;
+    position: fixed;
+    bottom: 20;
+}
 	
