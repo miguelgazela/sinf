@@ -1,106 +1,129 @@
-<html class="no-js">
-    
+<!DOCTYPE html>
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <title>Admin Home Page</title>
+        <title>Home Page</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="">
+
+        <!-- Mobile web app stuff -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta http-equiv="cleartype" content="on">
+
         <!-- Bootstrap -->
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="css/lungo.css">
+        <link rel="stylesheet" href="css/lungo.icon.css">
+        <link rel="stylesheet" href="css/lungo.theme.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
         <link href="vendors/fullcalendar/fullcalendar.css" rel="stylesheet" media="screen">
         <link href="assets/styles.css" rel="stylesheet" media="screen">
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     
-    
     <body>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                    </a>
-                    <p>
-                    </p>
-                    <img width="50" height="50" src="http://lorempixel.com/140/140/"> Nelson Mendes
-                    <ul class="nav pull-right">
-                    <li>
-                    	<form class="form-search">
-					<p>
-					</p>
-						<input type="text" class="input-medium search-query" /> <button type="submit" class="btn">Search</button>
-					</form>
+        <section id="main" data-transition="slide" class="drag" data-aside="features">
+            <header data-title="Home Page">
+                <nav>
+                    <a href="#" data-view-aside="features" data-icon="menu"></a>
+                </nav>
+                <nav class="on-right"></nav>
+            </header>         
+
+            <article id="main-page">
+                    <div class="empty">
+                        <span class="warning-sign"></span>
+                        <strong>Home Page</strong>
+                        <small>Awesome home page</small>
+                    </div>
+                </article>
+            </article>
+
+        </section>
+
+        <section id="clients" data-transition="slide">
+            <header data-title="Clients">
+                <nav>
+                    <a href="#" data-view-aside="features" data-icon="menu"></a>
+                </nav>
+                <nav class="on-right">
+                    <button data-view-section="splash" data-async="static/sections/splash.html" data-icon="user"></button>
+                </nav>
+            </header>
+
+            <article class="list scroll active">
+                <div class="clients-list">
+                    <span class="icon user"></span>
+                    <strong>Profile Empty</strong>
+                    <small>When you back a project or follow a friend, their activity will show up here.</small>
+                </div>
+                <ul>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                </ul>
+            </article>
+    </section>
+
+    <aside id="features" data-transition="left">
+        <header data-title="Sidebar">
+            <nav class="on-right">
+                    <a href="#" class="buttons" data-icon="settings"></a>
+                </nav>
+            </header>
+            <article class="list scroll active">
+                <ul>
+                    <li data-view-section="main" data-icon="home">
+                        <div class="tag on-right">3</div>
+                        <strong>Home Page</strong>
                     </li>
-                    </ul>
-                </div>
-				</div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span3" id="sidebar">
-                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-                        <li class="active">
-                            <a href="index.html"><i class="icon-chevron-right"></i> Encomendas Ativas</a>
-                        </li>
-                        <li>
-                            <a href="calendar.html"><i class="icon-chevron-right"></i> Historico </a>
-                        </li>
-                        <li>
-                            <a href="advanced_search.html"><i class="icon-chevron-right"></i> Pesquisa Avancada</a>
-                        </li>
-                        <li>
-                            <a href="profile.html"><i class="icon-chevron-right"></i> Perfil Utilizador</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-                
-                <!--/span-->
-                <div class="span9" id="content">
-                </br>
-                </br>
-                    <div class="row-fluid">
-                        	<div class="navbar">
-                            	<div class="navbar-inner">
-	                                <ul class="breadcrumb">
-	                                    <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
-	                                    <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
-	                                    <li>
-	                                        <a href="#">Encomendas Ativas</a> <span class="divider">/</span>	
-	                                    </li>
-	                                    
-	                                </ul>
-                            	</div>
-                        	</div>
-                    	</div>
-                    	</div>
-                        <div id="minicalendar" class="span2">
-                            <div id='calendar'></div>
-                        </div>
+                    <li data-view-section="clients" data-icon="group">
+                        <div class="tag on-right">3</div>
+                        <strong>Clients</strong>
+                    </li>
+                </ul>
+            </article>
+        </aside>
+
         <!--/.fluid-container-->
-        <script src="vendors/jquery-1.9.1.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.tmpl.min.js"></script>
+        <script src="js/vendor/quo.js"></script>
+        <script src="js/vendor/lungo.js"></script>
+        <script src="js/main.js"></script>
+
         <script src="vendors/easypiechart/jquery.easy-pie-chart.js"></script>
         <script src="assets/scripts.js"></script>
-        <script src="vendors/jquery-1.9.1.min.js"></script>
-        <script src="vendors/jquery-ui-1.10.3.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="vendors/fullcalendar/fullcalendar.js"></script>
         <script src="vendors/fullcalendar/miniCalendar.js"></script>
         <script src="vendors/fullcalendar/gcal.js"></script>
         <script src="assets/scripts.js"></script>
+        
         <script>
         $(function() {
             // Easy pie charts
             var calendar = $('#calendar').miniCalendar({});
         });
+        </script>
 
-        
+        <script>Lungo.init({
+            name: 'Sinf',
+            resources: ['static/sections/clients.html']
+        });
         </script>
     </body>
 
