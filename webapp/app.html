@@ -18,8 +18,8 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta http-equiv="cleartype" content="on">
 
-        <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen"> -->
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen"> -->
         <link rel="stylesheet" href="css/lungo.css">
         <link rel="stylesheet" href="css/lungo.icon.css">
         <link rel="stylesheet" href="css/lungo.theme.css">
@@ -32,64 +32,75 @@
     </head>
     
     <body>
+
         <section id="main" data-transition="slide" class="drag" data-aside="features">
             <header data-title="Encomendas Ativas">
                 <nav>
                     <a href="#" data-view-aside="features" data-icon="menu"></a>
                 </nav>
                 <nav class="on-right"></nav>
-            </header>         
+            </header>
+            
+            <article id="active" class="list scroll">
+                <div class="header">
+                    What
+                </div>
+                <li>active</li>
+            </article>
 
-            <article id="main-page">
-                    <div class="empty">
-                        <span class="warning-sign"></span>
-                        <strong>Home Page</strong>
-                        <small>Awesome home page</small>
-                    </div>
-                </article>
+            <article id="history" class="list scroll">
+                <li>history</li>
+            </article>
+
+            <article id="advanced_search" class="list scroll">
+                <li>advanced_search</li>
+            </article>
+
+            <article id="calendary" class="list scroll">
+                <li>calendary</li>
+            </article>
+
+            <article id="dashboard" class="list scroll">
+                <li>dashboard</li>
+            </article>
+
+            <article id="logout" class="list scroll">
+                <li>logout</li>
             </article>
 
         </section>
 
-        <section id="clients" data-transition="slide">
-            <header data-title="Clients">
-                <nav>
-                    <a href="#" data-view-aside="features" data-icon="menu"></a>
-                </nav>
+        <aside id="features" data-transition="left">
+            <header data-title="Username">
                 <nav class="on-right">
-                    <button data-view-section="splash" data-async="static/sections/splash.html" data-icon="user"></button>
-                </nav>
-            </header>
-
-            <article class="list scroll active">
-                <div class="clients-list">
-                    <span class="icon user"></span>
-                    <strong>Profile Empty</strong>
-                    <small>When you back a project or follow a friend, their activity will show up here.</small>
-                </div>
-                <ul>
-                    <li>stuff</li>
-                    <li>stuff</li>
-                    <li>stuff</li>
-                </ul>
-            </article>
-    </section>
-
-    <aside id="features" data-transition="left">
-        <header data-title="Sidebar">
-            <nav class="on-right">
                     <a href="#" class="buttons" data-icon="settings"></a>
                 </nav>
             </header>
             <article class="list scroll active">
                 <ul>
-                    <li data-view-section="main" data-icon="home" class="sidebar-btn" data-section="homepage">
+                    <li data-view-article="active" data-icon="list" class="sidebar-btn">
                         <div class="tag on-right">3</div>
-                        <strong>Home Page</strong>
+                        <strong>Encomendas Ativas</strong>
                     </li>
-                    <li data-view-section="clients" data-icon="group" class="sidebar-btn" data-section="clients">
+                    <li data-view-article="history" data-icon="time" class="sidebar-btn">
                         <div class="tag on-right">3</div>
-                        <strong>Clients</strong>
+                        <strong>Histórico</strong>
+                    </li>
+                    <li data-view-article="advanced_search" data-icon="search" class="sidebar-btn">
+                        <div class="tag on-right">3</div>
+                        <strong>Pesquisa Avançada</strong>
+                    </li>
+                    <li data-view-article="calendary" data-icon="calendar" class="sidebar-btn">
+                        <div class="tag on-right">3</div>
+                        <strong>Calendário</strong>
+                    </li>
+                    <li data-view-article="dashboard" data-icon="dashboard" class="sidebar-btn">
+                        <div class="tag on-right">3</div>
+                        <strong>Perfil Utilizador</strong>
+                    </li>
+                    <li data-view-article="logout" data-icon="signout" class="sidebar-btn">
+                        <div class="tag on-right">3</div>
+                        <strong>Logout</strong>
                     </li>
                 </ul>
             </article>
@@ -124,4 +135,4 @@
         </script>
     </body>
 
-</html>
+    </html>

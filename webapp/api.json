@@ -1,0 +1,22 @@
+[
+    {
+        "resource": "GET api/encomendas",
+        "description": "Retorna todas as encomendas da base de dados",
+        "href": "api/encomendas"
+    },
+    {
+        "resource": "GET api/encomendas/:id",
+        "description": "Retorna a encomenda especificada pelo parametro id",
+        "href": "api/encomendas/10"
+    },
+    {
+        "resource": "GET api/encomendas/ativas",
+        "description": "Retorna todas as encomendas ativas da base de dados",
+        "href": "api/encomendas/ativas"
+    },
+    {
+        "resource": "GET api/encomendas/ativas/:id",
+        "description": "Retorna a encomenda ativa especificada pelo parametro id",
+        "href": "api/encomendas/ativas/10"
+    }
+]
