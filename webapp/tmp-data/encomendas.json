@@ -1,0 +1,118 @@
+{
+  "ArrayOfDocVenda": {
+    "-xmlns:i": "http://www.w3.org/2001/XMLSchema-instance",
+    "-xmlns": "http://schemas.datacontract.org/2004/07/SINF_proj.Lib_Primavera.Model",
+    "DocVenda": [
+      {
+        "DataFim": "2013-09-13T10:33:03",
+        "DataInicio": "2013-09-13T00:00:00",
+        "Entidade": "VD",
+        "LinhasDoc": {
+          "LinhaDocVenda": {
+            "CodArtigo": "DV.0001",
+            "DescArtigo": "Criação de Arranjos Florais",
+            "Desconto": "0",
+            "IdCabecDoc": "{702F4F42-1C57-11E3-8FD6-0800276FC947}",
+            "PrecoUnitario": "14",
+            "Quantidade": "1",
+            "TotalILiquido": "14",
+            "TotalLiquido": "14",
+            "Unidade": "UN"
+          }
+        },
+        "NumDoc": "1",
+        "Serie": "2013",
+        "TotalMerc": "14",
+        "id": "{702F4F42-1C57-11E3-8FD6-0800276FC947}"
+      },
+      {
+        "DataFim": "2013-10-21T11:05:54",
+        "DataInicio": "2013-09-13T00:00:00",
+        "Entidade": "0003",
+        "LinhasDoc": {
+          "LinhaDocVenda": {
+            "CodArtigo": "DV.0001",
+            "DescArtigo": "Criação de Arranjos Florais",
+            "Desconto": "0",
+            "IdCabecDoc": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+            "PrecoUnitario": "14",
+            "Quantidade": "5",
+            "TotalILiquido": "70",
+            "TotalLiquido": "70",
+            "Unidade": "UN"
+          }
+        },
+        "NumDoc": "2",
+        "Serie": "2013",
+        "TotalMerc": "70",
+        "id": "{82B05883-1C57-11E3-8FD6-0800276FC947}"
+      },
+      {
+        "DataFim": "2013-10-21T10:17:53",
+        "DataInicio": "2013-10-21T00:00:00",
+        "Entidade": "0001",
+        "LinhasDoc": {
+          "LinhaDocVenda": {
+            "CodArtigo": "FC.0001",
+            "DescArtigo": "Rosas",
+            "Desconto": "0",
+            "IdCabecDoc": "{7429B0C3-3A31-11E3-9CE0-080027808344}",
+            "PrecoUnitario": "2.5",
+            "Quantidade": "1",
+            "TotalILiquido": "2.5",
+            "TotalLiquido": "2.5",
+            "Unidade": "UN"
+          }
+        },
+        "NumDoc": "3",
+        "Serie": "2013",
+        "TotalMerc": "2.5",
+        "id": "{7429B0C3-3A31-11E3-9CE0-080027808344}"
+      },
+      {
+        "DataFim": "2013-10-21T11:08:31",
+        "DataInicio": "2013-10-21T00:00:00",
+        "Entidade": "0005",
+        "LinhasDoc": {
+          "LinhaDocVenda": {
+            "CodArtigo": "FE.0001",
+            "DescArtigo": "Tesoura de Podar",
+            "Desconto": "0",
+            "IdCabecDoc": "{B804EB19-3A38-11E3-9CE0-080027808344}",
+            "PrecoUnitario": "15.6",
+            "Quantidade": "1",
+            "TotalILiquido": "15.6",
+            "TotalLiquido": "15.6",
+            "Unidade": "UN"
+          }
+        },
+        "NumDoc": "5",
+        "Serie": "2013",
+        "TotalMerc": "15.6",
+        "id": "{B804EB19-3A38-11E3-9CE0-080027808344}"
+      },
+      {
+        "DataFim": "2013-10-21T11:06:49",
+        "DataInicio": "2013-10-21T00:00:00",
+        "Entidade": "0004",
+        "LinhasDoc": {
+          "LinhaDocVenda": {
+            "CodArtigo": "TV.0001",
+            "DescArtigo": "Adubo Floral",
+            "Desconto": "0",
+            "IdCabecDoc": "{7F8117D8-3A38-11E3-9CE0-080027808344}",
+            "PrecoUnitario": "5",
+            "Quantidade": "10",
+            "TotalILiquido": "50",
+            "TotalLiquido": "50",
+            "Unidade": "KG"
+          }
+        },
+        "NumDoc": "4",
+        "Serie": "2013",
+        "TotalMerc": "50",
+        "id": "{7F8117D8-3A38-11E3-9CE0-080027808344}"
+      }
+    ]
+  }
+}

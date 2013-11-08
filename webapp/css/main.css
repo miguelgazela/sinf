@@ -10,6 +10,10 @@ body > aside {
     background-color: #333;
 }
 
+body > section > article {
+    background-color: #f0f2f4;
+}
+
 section > header > nav:not(.on-right) a,
 section > header > nav a {
     color: #fff;
@@ -48,6 +52,10 @@ aside .list li:hover {
     cursor: pointer;
 }
 
+aside .list li > input {
+    width: 100%;
+}
+
 aside .list li:not(.active) .tag:not(.icon),
 aside .list li a:not(.active) .tag:not(.icon) {
     background-color: #555;
@@ -57,3 +65,58 @@ section header nav a:hover,
 section header nav a:focus {
     text-decoration: none;
 }
+
+aside > header {
+    border-bottom: 1px solid #444;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.content-header {
+    padding: 10px 30px 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #d2d4d6;
+}
+
+.content-body {
+    padding: 30px 10px 30px;
+}
+
+.content-body .panel {
+    border-radius: 0;
+}
+
+.content-header > .breadcrumb {
+    margin-bottom: 0;
+    background-color: #fff;
+    font-size: 80%;
+}
+
+.content-body .panel-footer {
+    background-color: #fff;
+}
+
+.content-body .panel-body {
+    padding: 0;
+}
+
+.content-body .panel-body > .table {
+    margin-bottom: 0;
+}
+
+.content-body .panel-body > .table tbody {
+    font-size: 14px;
+    color: #777;
+}
+
+.content-body .panel-body > .table th {
+    font-weight: bold;
+}
+
+span.value:after {
+    content: "€";
+}
+

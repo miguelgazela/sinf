@@ -41,15 +41,66 @@
                 <nav class="on-right"></nav>
             </header>
             
-            <article id="active" class="list scroll">
-                <div class="header">
-                    What
+            <article id="active" class="scroll">
+                <div class="row content-header">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar encomenda..." onkeyup="narrowResults(this)">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                    </div>
                 </div>
-                <li>active</li>
+                <div class="row content-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Data início</th>
+                                        <th>Data fim</th>
+                                        <th>Estado</th>
+                                        <th>Valor</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
             </article>
 
             <article id="history" class="list scroll">
-                <li>history</li>
+                <div class="row content-header">
+                    <div class="input-group">
+                        <input type="text" class="form-control local-search" placeholder="Pesquisar encomenda...">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                    </div>
+                </div>
+                <div class="row content-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Data início</th>
+                                        <th>Data fim</th>
+                                        <th>Estado</th>
+                                        <th>Valor</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
             </article>
 
             <article id="advanced_search" class="list scroll">
@@ -68,6 +119,33 @@
                 <li>logout</li>
             </article>
 
+            <article id="package-detail" class="list scroll">
+                <div class="row content-header">
+                    <p>Header info of the package</p>
+                </div>
+                <div class="row content-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>entry1</th>
+                                        <th>entry2</th>
+                                        <th>entry3</th>
+                                        <th>entry4</th>
+                                        <th>entry5</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                            <p></p>
+                        </div>
+                    </div>
+            </article>
+
         </section>
 
         <aside id="features" data-transition="left">
@@ -78,6 +156,9 @@
             </header>
             <article class="list scroll active">
                 <ul>
+                    <li>
+                        <input type="text" placeholder="Pesquisa por ID...">
+                    </li>
                     <li data-view-article="active" data-icon="list" class="sidebar-btn">
                         <div class="tag on-right">3</div>
                         <strong>Encomendas Ativas</strong>
@@ -87,24 +168,33 @@
                         <strong>Histórico</strong>
                     </li>
                     <li data-view-article="advanced_search" data-icon="search" class="sidebar-btn">
-                        <div class="tag on-right">3</div>
                         <strong>Pesquisa Avançada</strong>
                     </li>
                     <li data-view-article="calendary" data-icon="calendar" class="sidebar-btn">
-                        <div class="tag on-right">3</div>
                         <strong>Calendário</strong>
                     </li>
                     <li data-view-article="dashboard" data-icon="dashboard" class="sidebar-btn">
-                        <div class="tag on-right">3</div>
                         <strong>Perfil Utilizador</strong>
                     </li>
                     <li data-view-article="logout" data-icon="signout" class="sidebar-btn">
-                        <div class="tag on-right">3</div>
                         <strong>Logout</strong>
                     </li>
                 </ul>
             </article>
         </aside>
+    
+        <!-- Templates -->
+
+        <script id="tmpl-package-row" type="text/x-jquery-tmpl">
+            <tr>
+                <td class="package-id">${id}</td>
+                <td>${DataInicio}</td>
+                <td>${DataFim}</td>
+                <td>?</td>
+                <td><span class="value">${TotalMerc}</span></td>
+                <td><button type="button" class="btn btn-default" data-package-id="${id}">+ detalhes</button></td>
+            </tr>
+        </script>
 
         <!--/.fluid-container-->
         <script src="js/vendor/jquery-1.10.1.min.js"></script>
@@ -114,25 +204,7 @@
         <script src="js/vendor/lungo.js"></script>
         <script src="js/main.js"></script>
 
-        <script src="vendors/easypiechart/jquery.easy-pie-chart.js"></script>
-        <script src="assets/scripts.js"></script>
-        <script src="vendors/fullcalendar/fullcalendar.js"></script>
-        <script src="vendors/fullcalendar/miniCalendar.js"></script>
-        <script src="vendors/fullcalendar/gcal.js"></script>
-        <script src="assets/scripts.js"></script>
-        
-        <script>
-        $(function() {
-            // Easy pie charts
-            var calendar = $('#calendar').miniCalendar({});
-        });
-        </script>
-
-        <script>Lungo.init({
-            name: 'Sinf',
-            resources: ['static/sections/clients.html']
-        });
-        </script>
+        <script>Lungo.init({});</script>
     </body>
 
     </html>
