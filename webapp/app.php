@@ -6,7 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <title>Home Page</title>
-
+        <link rel="stylesheet" type="text/css" href="libs/calendar/Calendar.css">
         <meta charset="utf-8">
         <meta name="description" content="">
 
@@ -25,6 +25,20 @@
         <link rel="stylesheet" href="css/lungo.theme.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
+
+<!--codigo calendario -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery-1.9.1"></script>
+<script src="jquery-ui-1.10.3.custom"></script>
+<script src="jquery-ui-1.10.3.custom.min"></script>
+<script>
+    $('#calendar').datepicker({
+        inline: true,
+        firstDay: 1,
+        showOtherMonths: true,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    });
+</script>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -112,7 +126,9 @@
             </article>
 
             <article id="calendary" class="list scroll">
-                <li>calendary</li>
+                <li>
+                  <?php include("libs/calendar/calendar.php"); ?>
+                </li>
             </article>
 
             <article id="dashboard" class="list scroll">
@@ -234,6 +250,8 @@
         <script src="js/vendor/quo.js"></script>
         <script src="js/vendor/lungo.js"></script>
         <script src="js/main.js"></script>
+        <script type="libs/fullcalendar/fullcalendar.js"></script>
+        <script type="libs/fullcalendar/fullcalendar.css"></script>
 
         <script>Lungo.init({});</script>
     </body>

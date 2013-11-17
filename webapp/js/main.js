@@ -1,6 +1,6 @@
-var BASE_PATH = "http://192.168.1.4:8888/sinf/webapp/";
-var BASE_PATH2 = "http://localhost:8888/sinf/";
-var BASE_URL = "http://localhost:8888/sinf/webapp/";
+var BASE_PATH = "http://192.168.1.4:8888/";
+var BASE_PATH2 = "http://localhost:8888/";
+var BASE_URL = "http://localhost:8888/";
 
 var sinfapp = sinfapp || {};
 

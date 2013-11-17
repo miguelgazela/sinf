@@ -7,7 +7,7 @@
     $app = new \Slim\Slim();
 
     $app->get('/', function() use ($app, $BASE_URL) {
-        $app->redirect($BASE_URL.'app.html');
+        $app->redirect($BASE_URL.'app.php');
     });
 
     $app->get('/api', function() use ($app, $BASE_URL) {
