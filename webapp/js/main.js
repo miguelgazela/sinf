@@ -4,6 +4,8 @@ var sinfapp = sinfapp || {};
 $(document).ready(function(){
     console.log("document is ready!");
 
+    new FastClick(document.body);
+
     $('[data-toggle=offcanvas]').click(function() {
         $('.row-offcanvas').toggleClass('active');
     });

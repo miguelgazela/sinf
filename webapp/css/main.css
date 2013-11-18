@@ -6,6 +6,10 @@ html {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
+html, body {
+  height: 100%;
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------
@@ -44,13 +48,38 @@ html {
   }
 }
 
+.row {
+  margin: 0;
+  height: 100%;
+  background-color: #f0f2f4;
+}
 
 .col-xs-6, .col-xs-12,
 .col-sm-3, .col-sm-9 {
   padding: 0;
 }
 
-
 .sidebar-offcanvas {
-  
+  height: 100%;
+  background-color: #333;
+}
+
+.sidebar-offcanvas .list-group-item {
+  background-color: #333;
+  border: none;
+  color: #999;
+}
+
+.sidebar-offcanvas .list-group-item:focus,
+.sidebar-offcanvas .list-group-item:hover,
+.sidebar-offcanvas .list-group-item.active,
+.sidebar-offcanvas .list-group-item.active:hover,
+.sidebar-offcanvas .list-group-item.active:focus {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.sidebar-offcanvas .list-group-item:first-child,
+.sidebar-offcanvas .list-group-item:last-child {
+  border-radius: 0;
 }

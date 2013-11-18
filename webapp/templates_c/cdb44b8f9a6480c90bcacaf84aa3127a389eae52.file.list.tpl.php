@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-18 22:31:01
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-18 23:48:52
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1384810253,
+      1 => 1384814928,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'BASE_URL' => 0,
     'session_id' => 0,
-    'type' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -67,9 +66,34 @@ logout" class="list-group-item">Logout</a>
         <p class="pull-left visible-xs">
           <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
         </p>
-        <div class="jumbotron">
-          <h2>Encomendas <?php echo $_smarty_tpl->tpl_vars['type']->value;?>
-!</h2>
+
+        <div class="row content-header">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pesquisar encomenda..." onkeyup="narrowResults(this)">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+          </div>
+        </div>
+        <div class="row content-body">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Data início</th>
+                    <th>Data fim</th>
+                    <th>Estado</th>
+                    <th>Valor</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="panel-footer">
+              <p></p>
+            </div>
+          </div>
         </div>
       </div>
 
