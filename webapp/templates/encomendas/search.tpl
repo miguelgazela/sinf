@@ -15,32 +15,29 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row row-offcanvas row-offcanvas-left">
+  <div class="row row-offcanvas row-offcanvas-left">
 
-      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-        <div class="list-group">
-          <a href="{$BASE_URL}encomendas/ativas" class="list-group-item">Encomendas Ativas</a>
-          <a href="{$BASE_URL}encomendas/historico" class="list-group-item">Histórico</a>
-          <a href="{$BASE_URL}encomendas/pesquisa" class="list-group-item active">Pesquisa Avançada</a>
-          <a href="{$BASE_URL}encomendas/calendario" class="list-group-item">Calendário</a>
-          <a href="{$BASE_URL}utilizador/{$session_id}" class="list-group-item">Perfil Utilizador</a>
-          <a href="{$BASE_URL}logout" class="list-group-item">Logout</a>
-        </div>
-      </div><!--/span-->
-
-      <div class="col-xs-12 col-sm-9">
-        <p class="pull-left visible-xs">
-          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-        </p>
-        <div class="jumbotron">
-          <h2>Pesquisa Avançada</h2>
-        </div>
+    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+      <div class="list-group">
+        <a href="{$BASE_URL}encomendas/ativas" class="list-group-item">Encomendas Ativas</a>
+        <a href="{$BASE_URL}encomendas/historico" class="list-group-item">Histórico</a>
+        <a href="{$BASE_URL}encomendas/pesquisa" class="list-group-item active">Pesquisa Avançada</a>
+        <a href="{$BASE_URL}encomendas/calendario" class="list-group-item">Calendário</a>
+        <a href="{$BASE_URL}utilizador/{$session_id}" class="list-group-item">Perfil Utilizador</a>
+        <a href="{$BASE_URL}logout" class="list-group-item">Logout</a>
       </div>
+    </div><!--/span-->
 
-    </div><!--/row-->
+    <div class="col-xs-12 col-sm-9">
+      <p class="pull-left visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+      <div class="jumbotron">
+        <h2>Pesquisa Avançada</h2>
+      </div>
+    </div>
 
-  </div><!--/.container-->
+  </div><!--/row-->
 
   {include file="../common/js.tpl"}
 </body>
