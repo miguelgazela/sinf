@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-18 17:44:19
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-18 22:31:01
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1384793052,
+      1 => 1384810253,
       2 => 'file',
     ),
   ),
@@ -43,7 +43,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body>
-  <div class="container">
     <div class="row row-offcanvas row-offcanvas-left">
 
       <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
@@ -75,8 +74,6 @@ logout" class="list-group-item">Logout</a>
       </div>
 
     </div><!--/row-->
-
-  </div><!--/.container-->
 
   <?php echo $_smarty_tpl->getSubTemplate ("../common/js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
