@@ -1,24 +1,41 @@
 <?php
     include_once('common/init.php');
-    include_once ($BASE_PATH .'libs/Slim/Slim.php');
-
-    \Slim\Slim::registerAutoloader();
-    $app = new \Slim\Slim();
 
     $app->get('/', function() use ($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'pages/encomendas/list.php?type=active');
+    });
 
-        // TODO remove this
-        $_SESSION['id'] = -1;
+    $app->get('/login/', function() use($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'pages/auth/login.php');
+    });
 
-        if(isset($_SESSION['id'])) {
-            $app->redirect($BASE_URL.'pages/encomendas/list.php?type=active');
-        } else {
-            $app->redirect($BASE_URL.'pages/auth/login.php');
-        }
-        
+    $app->get('/logout/', function() use($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'actions/auth/logout.php');
+    });
+
+    $app->get('/encomendas/ativas', function() use($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'pages/encomendas/list.php?type=active');
+    });
+
+    $app->get('/encomendas/historico', function() use($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'pages/encomendas/list.php?type=inactive');
+    });
+
+    $app->get('/encomendas/pesquisa', function() use($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'pages/encomendas/search.php');
+    });
+
+    $app->get('/encomendas/calendario/', function() use($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'pages/encomendas/calendar.php');
+    });
+
+    $app->get('/utilizador/:id', function($id) use($app, $BASE_URL) {
+        $app->redirect($BASE_URL.'pages/utilizadores/view.php?id='.$id);;
     });
 
 
+
+    // API
 
     $app->get('/api', function() use ($app, $BASE_URL) {
         $app->redirect($BASE_URL.'api.html');

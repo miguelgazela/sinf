@@ -1,6 +1,6 @@
 <?php
     // This file is included in every page
-    ini_set('display_errors', 'On');
+    // ini_set('display_errors', 'On');
 
     // production paths
     //$BASE_URL = 'http://paginas.fe.up.pt/~ei10076/projects/agiba/';
@@ -11,9 +11,9 @@
     $BASE_PATH = '/Users/migueloliveira/Dropbox/projects/sinf/webapp/';
 
     // Slim Framework
-    // require $BASE_PATH . '/libs/Slim/Slim.php';
-    // \Slim\Slim::registerAutoloader();
-    // $app = new \Slim\Slim();
+    include_once ($BASE_PATH .'libs/Slim/Slim.php');
+    \Slim\Slim::registerAutoloader();
+    $app = new \Slim\Slim();
 
     require_once('database.php');
     require_once('session.php');

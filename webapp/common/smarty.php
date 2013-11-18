@@ -24,6 +24,8 @@
 
     // Send session variables to Smarty
     // $smarty->assign("s_username", $_SESSION['s_username']);
-    // $smarty->assign("s_user_id", $_SESSION['s_user_id']);
+    // TODO remove this
+    $_SESSION['session_id'] = -1;
+    $smarty->assign("session_id", $_SESSION['session_id']);
     // $smarty->assign("s_user_permission", $_SESSION['s_user_permission']);
 ?>
