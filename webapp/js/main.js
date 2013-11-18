@@ -1,5 +1,4 @@
 var BASE_URL = "http://192.168.1.5:8888/sinf/webapp/";
-
 var sinfapp = sinfapp || {};
 
 $(document).ready(function(){
