@@ -1,14 +1,24 @@
 <?php
     include_once('common/init.php');
+    include_once ($BASE_PATH .'libs/Slim/Slim.php');
 
-    require 'vendors/Slim/Slim.php';
     \Slim\Slim::registerAutoloader();
-
     $app = new \Slim\Slim();
 
     $app->get('/', function() use ($app, $BASE_URL) {
-        $app->redirect($BASE_URL.'app.html');
+
+        // TODO remove this
+        $_SESSION['id'] = -1;
+
+        if(isset($_SESSION['id'])) {
+            $app->redirect($BASE_URL.'pages/encomendas/list.php?type=active');
+        } else {
+            $app->redirect($BASE_URL.'pages/auth/login.php');
+        }
+        
     });
+
+
 
     $app->get('/api', function() use ($app, $BASE_URL) {
         $app->redirect($BASE_URL.'api.html');
