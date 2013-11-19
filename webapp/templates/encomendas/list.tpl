@@ -32,14 +32,12 @@
           <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
         </div>
         <div class="list-group">
-          <ul class="nav nav-pills nav-stacked">
-          <li><a href="{$BASE_URL}encomendas/ativas" class="list-group-item"><span class="badge pull-right">42</span>Encomendas Ativas</a></li>
-          <li><a href="{$BASE_URL}encomendas/historico" class="list-group-item">Histórico</a></li>
-          <li><a href="{$BASE_URL}encomendas/pesquisa" class="list-group-item">Pesquisa Avançada</a></li>
-          <li><a href="{$BASE_URL}encomendas/calendario" class="list-group-item">Calendário</a></li>
-          <li><a href="{$BASE_URL}utilizador/{$session_id}" class="list-group-item">Perfil Utilizador</a></li>
-          <li><a href="{$BASE_URL}logout" class="list-group-item">Logout</a></li>
-          </ul>
+          <a href="{$BASE_URL}encomendas/ativas" class="list-group-item"><span class="badge pull-right">42</span>Encomendas Ativas</a>
+          <a href="{$BASE_URL}encomendas/historico" class="list-group-item">Histórico</a>
+          <a href="{$BASE_URL}encomendas/pesquisa" class="list-group-item">Pesquisa Avançada</a>
+          <a href="{$BASE_URL}encomendas/calendario" class="list-group-item">Calendário</a>
+          <a href="{$BASE_URL}utilizador/{$session_id}" class="list-group-item">Perfil Utilizador</a>
+          <a href="{$BASE_URL}logout" class="list-group-item">Logout</a>
         </div>
       </div><!--/span-->
 
