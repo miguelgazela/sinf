@@ -18,5 +18,7 @@
     $smarty->assign('type', $_GET['type']);
 
     // display smarty template
+    //$smarty->display('header.tpl');
+
     $smarty->display('encomendas/list.tpl');
 ?>
