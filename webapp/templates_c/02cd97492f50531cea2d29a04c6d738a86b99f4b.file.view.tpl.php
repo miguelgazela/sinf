@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-18 23:26:03
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 13:12:42
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/utilizadores/view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:232809210528a4326819395-25618846%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '02cd97492f50531cea2d29a04c6d738a86b99f4b' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/utilizadores/view.tpl',
-      1 => 1384811224,
+      1 => 1385035954,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_528a43268b77a6_94081366',
   'variables' => 
   array (
-    'BASE_URL' => 0,
     'session_id' => 0,
   ),
   'has_nocache_code' => false,
@@ -44,28 +43,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body>
   <div class="row row-offcanvas row-offcanvas-left">
 
-    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-      <div class="list-group">
-        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-encomendas/ativas" class="list-group-item">Encomendas Ativas</a>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-encomendas/historico" class="list-group-item">Histórico</a>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-encomendas/pesquisa" class="list-group-item">Pesquisa Avançada</a>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-encomendas/calendario" class="list-group-item">Calendário</a>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-utilizador/<?php echo $_smarty_tpl->tpl_vars['session_id']->value;?>
-" class="list-group-item active">Perfil Utilizador</a>
-        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-logout" class="list-group-item">Logout</a>
-      </div>
-    </div><!--/span-->
+    <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 
     <div class="col-xs-12 col-sm-9">
+
+      <nav class="navbar navbar-default" role="navigation">
+      </nav>
+
       <p class="pull-left visible-xs">
         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
       </p>
+      
       <div class="jumbotron">
         <h2>Perfil de Utilizador com id: <?php echo $_smarty_tpl->tpl_vars['session_id']->value;?>
 </h2>

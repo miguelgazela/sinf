@@ -7,7 +7,7 @@
     //$BASE_PATH = '/usr/users2/mieic2010/ei10076/public_html/projects/agiba/';
 
     // development paths
-    $BASE_URL = "http://localhost:8888/sinf/webapp/";
+    $BASE_URL = "http://192.168.1.2:8888/sinf/webapp/";
     $BASE_PATH = '/Users/migueloliveira/Dropbox/projects/sinf/webapp/';
     //$BASE_PATH = '/Users/nelsonmendes/Documents/Git/sinf/webapp/';
 

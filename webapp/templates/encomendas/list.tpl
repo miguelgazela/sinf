@@ -9,71 +9,73 @@
   <meta name="author" content="">
 
   <title></title>
-  <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="{$BASE_URL}css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-  <style type="text/css">
-    #sidebar {
-    float:left;
-    background-color: #d4d4d4;
-    height:100%;
-    z-index:1000;
-  }
-  .overlay{
-    opacity:0.8;
-    background-color:#ccc;
-    position:fixed;
-    height:100%;
-    left:0px;
-    z-index:1000;
-}
-#logout{
-  bottom: 0px;
-}
-  #navbar{
-    background-color: #949494;
-  }
-  body { padding-top: 70px; }
-
-  </style>
-
-  {include file="../common/css.tpl"}
+  {include file="common/css.tpl"}
   
 </head>
 
-<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-<h1>Bela Flor</h1>
-</nav>
-
 <body>
 
+  <div class="row row-offcanvas row-offcanvas-left">
 
-      <div class="col-xs-6 col-sm-3 sidebar-offcanvas overlay" id="sidebar" role="navigation">
-        <h3>Username</h3>
+    {include file="sidebar.tpl"}
+
+    <div class="col-xs-12 col-sm-9" id="content">
+      
+      <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown sorting">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenar por <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form action="#" class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+          </form>
+      </nav>
+
+      <div class="row content-header">
         <div class="input-group">
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" placeholder="Pesquisar encomenda..." onkeyup="narrowResults(this)">
           <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
         </div>
-        <div class="list-group">
-          <a href="{$BASE_URL}encomendas/ativas" class="list-group-item"><span class="badge pull-right">42</span>Encomendas Ativas</a>
-          <a href="{$BASE_URL}encomendas/historico" class="list-group-item">Histórico</a>
-          <a href="{$BASE_URL}encomendas/pesquisa" class="list-group-item">Pesquisa Avançada</a>
-          <a href="{$BASE_URL}encomendas/calendario" class="list-group-item">Calendário</a>
-          <a href="{$BASE_URL}utilizador/{$session_id}" class="list-group-item">Perfil Utilizador</a>
+      </div>
+      <div class="row content-body">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Data início</th>
+                  <th>Data fim</th>
+                  <th>Estado</th>
+                  <th>Valor</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="panel-footer">
+            <p></p>
+          </div>
         </div>
-        <div class="list-group" id="logout">
-          <a href="{$BASE_URL}logout" class="list-group-item">Logout</a>
-        </div>
-      </div><!--/span-->
-
-      <div class="col-xs-12 col-sm-9" id="content">
-        <p class="pull-left visible-xs">
-          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-        </p>
-
-        <!-- add content here -->
       </div>
 
-    </div><!--/row-->
+      <p class="pull-left visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+    </div><!--/col-xs-12-->
+
+  </div><!--/row-->
 
   {include file="../common/js.tpl"}
 </body>
