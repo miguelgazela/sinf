@@ -13,19 +13,41 @@
 
   <style type="text/css">
     #sidebar {
-
     float:left;
+    background-color: #d4d4d4;
+    height:100%;
+    z-index:1000;
   }
+  .overlay{
+    opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    height:100%;
+    left:0px;
+    z-index:1000;
+}
+#logout{
+  bottom: 0px;
+}
+  #navbar{
+    background-color: #949494;
+  }
+  body { padding-top: 70px; }
+
   </style>
 
   {include file="../common/css.tpl"}
   
 </head>
 
-<body>
-    <div class="row row-offcanvas row-offcanvas-left">
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+<h1>Bela Flor</h1>
+</nav>
 
-      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+<body>
+
+
+      <div class="col-xs-6 col-sm-3 sidebar-offcanvas overlay" id="sidebar" role="navigation">
         <h3>Username</h3>
         <div class="input-group">
           <input type="text" class="form-control">
@@ -37,6 +59,8 @@
           <a href="{$BASE_URL}encomendas/pesquisa" class="list-group-item">Pesquisa Avançada</a>
           <a href="{$BASE_URL}encomendas/calendario" class="list-group-item">Calendário</a>
           <a href="{$BASE_URL}utilizador/{$session_id}" class="list-group-item">Perfil Utilizador</a>
+        </div>
+        <div class="list-group" id="logout">
           <a href="{$BASE_URL}logout" class="list-group-item">Logout</a>
         </div>
       </div><!--/span-->
