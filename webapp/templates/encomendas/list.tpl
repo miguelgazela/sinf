@@ -21,7 +21,7 @@
 
     {include file="sidebar.tpl"}
 
-    <div class="col-xs-12 col-sm-9" id="content">
+    <div class="col-xs-12 col-sm-9 content">
       
       <nav class="navbar navbar-default" role="navigation">
         <ul class="nav navbar-nav navbar-right">
@@ -36,37 +36,29 @@
         </ul>
         <form action="#" class="navbar-form navbar-right" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Pesquisa local" onkeyup="narrowResults(this)">
             </div>
           </form>
       </nav>
 
-      <div class="row content-header">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Pesquisar encomenda..." onkeyup="narrowResults(this)">
-          <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Data início</th>
+                <th>Data fim</th>
+                <th>Estado</th>
+                <th>Valor</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
-      </div>
-      <div class="row content-body">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Data início</th>
-                  <th>Data fim</th>
-                  <th>Estado</th>
-                  <th>Valor</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="panel-footer">
-            <p></p>
-          </div>
+        <div class="panel-footer">
+          <p></p>
         </div>
       </div>
 

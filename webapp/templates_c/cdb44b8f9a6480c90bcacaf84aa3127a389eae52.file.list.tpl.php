@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:21:35
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:37:01
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1385043693,
+      1 => 1385044620,
       2 => 'file',
     ),
   ),
@@ -49,7 +49,7 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-    <div class="col-xs-12 col-sm-9" id="content">
+    <div class="col-xs-12 col-sm-9 content">
       
       <nav class="navbar navbar-default" role="navigation">
         <ul class="nav navbar-nav navbar-right">
@@ -64,37 +64,29 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
         </ul>
         <form action="#" class="navbar-form navbar-right" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Pesquisa local" onkeyup="narrowResults(this)">
             </div>
           </form>
       </nav>
 
-      <div class="row content-header">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Pesquisar encomenda..." onkeyup="narrowResults(this)">
-          <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Data início</th>
+                <th>Data fim</th>
+                <th>Estado</th>
+                <th>Valor</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
-      </div>
-      <div class="row content-body">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Data início</th>
-                  <th>Data fim</th>
-                  <th>Estado</th>
-                  <th>Valor</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="panel-footer">
-            <p></p>
-          </div>
+        <div class="panel-footer">
+          <p></p>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 13:12:42
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:46:04
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/utilizadores/view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:232809210528a4326819395-25618846%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '02cd97492f50531cea2d29a04c6d738a86b99f4b' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/utilizadores/view.tpl',
-      1 => 1385035954,
+      1 => 1385045065,
       2 => 'file',
     ),
   ),
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </head>
 
-<body>
+<body class="_profile">
   <div class="row row-offcanvas row-offcanvas-left">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -54,7 +54,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <p class="pull-left visible-xs">
         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
       </p>
-      
+
       <div class="jumbotron">
         <h2>Perfil de Utilizador com id: <?php echo $_smarty_tpl->tpl_vars['session_id']->value;?>
 </h2>

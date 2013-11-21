@@ -101,7 +101,10 @@ html, body {
 .sidebar-offcanvas .list-group-item:hover,
 .sidebar-offcanvas .list-group-item.active,
 .sidebar-offcanvas .list-group-item.active:hover,
-.sidebar-offcanvas .list-group-item.active:focus {
+.sidebar-offcanvas .list-group-item.active:focus,
+body._search .list-group-item._search,
+body._calendar .list-group-item._calendar,
+body._profile .list-group-item._profile {
   background-color: #2ecc71;
   color: #fff;
   border-color: #c2c2c2;
@@ -132,6 +135,7 @@ html, body {
   background-color: #2ecc71;
   border-radius: 0;
   border: 0;
+  margin-bottom: 0;
 }
 
 .navbar .dropdown.sorting {
@@ -176,4 +180,29 @@ html, body {
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
   color: #fff;
+}
+
+.navbar .navbar-form .form-control {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 150px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.navbar .navbar-form .form-control:focus {
+  width: 300px;
+}
+
+.content .panel {
+  border-radius: 0;
+  height: 100%;
+}
+
+.panel .panel-body {
+  
 }

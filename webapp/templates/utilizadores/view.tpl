@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class="_profile">
   <div class="row row-offcanvas row-offcanvas-left">
 
     {include file="sidebar.tpl"}
@@ -27,7 +27,7 @@
       <p class="pull-left visible-xs">
         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
       </p>
-      
+
       <div class="jumbotron">
         <h2>Perfil de Utilizador com id: {$session_id}</h2>
       </div>

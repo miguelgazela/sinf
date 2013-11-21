@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 13:12:40
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:46:15
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/calendar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:157117406528a4325510619-73599953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '911e087180d3072093929de9a8835f2f2ca4ca74' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/calendar.tpl',
-      1 => 1385035941,
+      1 => 1385045168,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </head>
 
-<body>
+<body class="_calendar">
   <div class="row row-offcanvas row-offcanvas-left">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <p class="pull-left visible-xs">
         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
       </p>
-      
+
       <div class="jumbotron">
         <h2>Calendário</h2>
       </div>
