@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:45:12
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 23:03:21
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1486733428528df6c7008fe9-62923876%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '34617e1c56f7e71ecc92001172659397704bba2a' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/sidebar.tpl',
-      1 => 1385045110,
+      1 => 1385071398,
       2 => 'file',
     ),
   ),

@@ -7,14 +7,13 @@
         die();
     }
 
-    // check $_GET['type'] and get the right packages
+    // check $_GET['id'] and get the right package from our API
 
     // temporary reading from JSON file
     $file = $BASE_URL."tmp-data/encomendas.json";
     $packages = json_decode(file_get_contents($file), true);
 
-    // send data to smarty and display it
-    $smarty->assign('packages', $packages);
-    $smarty->assign('type', $_GET['type']);
+    // send data to smarty and display template
+    $smarty->assign('package', $packages[0]);
     $smarty->display('encomendas/list.tpl');
 ?>

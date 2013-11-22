@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:37:01
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 23:31:02
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1385044620,
+      1 => 1385073059,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'BASE_URL' => 0,
+    'packages' => 0,
+    'package' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -82,11 +84,32 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
                 <th></th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['packages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
+$_smarty_tpl->tpl_vars['package']->_loop = true;
+?>
+              <tr>
+                <td class="package-id"><?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['package']->value['DataInicio'];?>
+</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['package']->value['DataFim'];?>
+</td>
+                <td>?</td>
+                <td><span class="value"><?php echo $_smarty_tpl->tpl_vars['package']->value['TotalMerc'];?>
+€</span></td>
+                <td><button type="button" class="btn btn-default btn-sm" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+">+ detalhes</button></td>
+              </tr>
+              <?php } ?>
+            </tbody>
           </table>
         </div>
         <div class="panel-footer">
-          <p></p>
+          <p># Encomendas: <?php echo count($_smarty_tpl->tpl_vars['packages']->value);?>
+</p>
         </div>
       </div>
 

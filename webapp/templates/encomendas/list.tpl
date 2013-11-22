@@ -54,11 +54,22 @@
                 <th></th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              {foreach $packages as $package}
+              <tr>
+                <td class="package-id">{$package.id}</td>
+                <td>{$package.DataInicio}</td>
+                <td>{$package.DataFim}</td>
+                <td>?</td>
+                <td><span class="value">{$package.TotalMerc}€</span></td>
+                <td><button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">+ detalhes</button></td>
+              </tr>
+              {/foreach}
+            </tbody>
           </table>
         </div>
         <div class="panel-footer">
-          <p></p>
+          <p># Encomendas: {$packages|@count}</p>
         </div>
       </div>
 

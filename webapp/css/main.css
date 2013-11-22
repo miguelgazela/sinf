@@ -203,6 +203,15 @@ body._profile .list-group-item._profile {
   height: 100%;
 }
 
-.panel .panel-body {
-  
+.panel,
+.table {
+  margin-bottom: 0;
+}
+
+.panel > .panel-body {
+  padding: 0;
+}
+
+.panel-footer p{
+  margin-bottom: 0;
 }
