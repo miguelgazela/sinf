@@ -11,11 +11,14 @@
   <title>Calendário</title>
 
   {include file="../common/css.tpl"}
+  {include file="../common/js.tpl"}
+
 
 </head>
 
-<body class="_calendar">
+<body class="_calendars">
   <div class="row row-offcanvas row-offcanvas-left">
+        
 
     {include file="sidebar.tpl"}
 
@@ -31,10 +34,27 @@
       <div class="jumbotron">
         <h2>Calendário</h2>
       </div>
+  <div id="calendar" class="calendar"></div>
+      <style type="text/css">
+        
+      </style>
+    <script type="text/javascript">
+      $(document).ready( function(){
+        theMonths = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        theDays = ["D", "S", "T", "Q", "Q", "S", "S"];
+        $('.calendar').calendar({
+          months: theMonths,
+          days: theDays,
+          req_ajax: {
+            type: 'get',
+            url: '{$BASE_URL}ajax/json.php'
+          }
+        });
+      });
+    </script>
     </div> <!-- col-xs-12 -->
 
   </div><!--/row-->
 
-  {include file="../common/js.tpl"}
 </body>
 </html>

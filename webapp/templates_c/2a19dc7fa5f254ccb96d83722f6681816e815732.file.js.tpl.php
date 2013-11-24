@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-19 10:01:15
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-22 21:29:41
          compiled from "/Users/nelsonmendes/Documents/Git/sinf/webapp/templates/common/js.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2000329262528a8ee2624ab2-53119532%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2a19dc7fa5f254ccb96d83722f6681816e815732' => 
     array (
       0 => '/Users/nelsonmendes/Documents/Git/sinf/webapp/templates/common/js.tpl',
-      1 => 1384854959,
+      1 => 1385155773,
       2 => 'file',
     ),
   ),
@@ -32,4 +32,6 @@ js/vendor/quo.js"></script>
 <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 js/vendor/fastclick.js"></script>
 <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-js/main.js"></script><?php }} ?>
+js/main.js"></script>
+<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+js/vendor/bootstrap_calendar.js"></script><?php }} ?>
