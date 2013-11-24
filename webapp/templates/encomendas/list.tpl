@@ -34,11 +34,12 @@
             </ul>
           </li>
         </ul>
-        <form action="#" class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Pesquisa local" onkeyup="narrowResults(this)">
-            </div>
-          </form>
+        <form action="#" class="navbar-form" role="search">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            <input type="text" class="form-control" placeholder="Pesquisa local..." onkeyup="narrowResults(this);">
+          </div>
+        </form>
       </nav>
 
       <div class="panel panel-default">
