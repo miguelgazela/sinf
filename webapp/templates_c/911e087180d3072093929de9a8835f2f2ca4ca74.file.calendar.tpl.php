@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 10:27:19
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 18:17:01
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/calendar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:157117406528a4325510619-73599953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '911e087180d3072093929de9a8835f2f2ca4ca74' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/calendar.tpl',
-      1 => 1385284893,
+      1 => 1385313396,
       2 => 'file',
     ),
   ),
@@ -43,14 +43,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </head>
 
-<body class="_calendars">
-  <div class="row row-offcanvas row-offcanvas-left">
+<body class="_calendar">
+  <div class="row">
         
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-    <div class="col-xs-12 col-sm-9">
+    <div class="col-xs-12 col-sm-9 content">
 
       <nav class="navbar navbar-default" role="navigation">
       </nav>

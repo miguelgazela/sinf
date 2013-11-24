@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:43:47
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 18:14:27
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1538292317528a4323ca1d31-06379937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2f1c001ef70cd818fa36e8645d0954798559fb2a' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/search.tpl',
-      1 => 1385044929,
+      1 => 1385313266,
       2 => 'file',
     ),
   ),
@@ -36,12 +36,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body class="_search">
-  <div class="row row-offcanvas row-offcanvas-left">
+  <div class="row">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-    <div class="col-xs-12 col-sm-9">
+    <div class="col-xs-12 col-sm-9 content">
 
       <nav class="navbar navbar-default" role="navigation">
       </nav>

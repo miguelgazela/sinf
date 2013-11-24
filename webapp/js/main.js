@@ -26,15 +26,13 @@ $(document).ready(function(){
 function narrowResults(input) {
     var text = $(input).val().trim().toLowerCase();
 
-    $('.package-id').each(function(){
+    $('.package').each(function(){
+        var encomenda = $(this);
+
         if(text === '') {
-            $(this).parent().show();
+            encomenda.show();
         } else {
-            if($(this).text().toLowerCase().indexOf(text) == -1) {
-                $(this).parent().hide();
-            } else {
-                $(this).parent().show();
-            }
+            encomenda = (encomenda.attr('data-package-id').toLowerCase().indexOf(text) === -1) ? encomenda.hide() : encomenda.show();
         }
     });
 }

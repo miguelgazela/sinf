@@ -219,10 +219,10 @@ body._profile .list-group-item._profile {
   padding: 6px;
 }
 
-.package-footer .col-sm-3:last-child {
-  height: 69px; /* a bit stupid, but solved my problem */
+/*.package-footer .col-sm-3:last-child {
+  height: 69px;  a bit stupid, but solved my problem 
   line-height: 69px;
-}
+}*/
 
 .package-footer .col-sm-3:not(:first-child) {
   border-left: 1px solid #E9E8E3;
@@ -230,4 +230,9 @@ body._profile .list-group-item._profile {
 
 .package-footer button {
   color: #75767D;
+}
+
+.page-header {
+  padding-left: 15px;
+  border-bottom: 1px solid #E9E8E3
 }

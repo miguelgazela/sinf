@@ -7,6 +7,12 @@
         die();
     }
 
+    // temporary reading from JSON file
+    $file = $BASE_URL."tmp-data/utilizadores.json";
+    $user = json_decode(file_get_contents($file), true);
+
     // display smarty template
+    $smarty->assign('user', $user['m_Item1']);
+    $smarty->assign('packages', $user['m_Item2']);
     $smarty->display('utilizadores/view.tpl');
 ?>

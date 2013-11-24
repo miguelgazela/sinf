@@ -16,13 +16,13 @@
 
 </head>
 
-<body class="_calendars">
-  <div class="row row-offcanvas row-offcanvas-left">
+<body class="_calendar">
+  <div class="row">
         
 
     {include file="sidebar.tpl"}
 
-    <div class="col-xs-12 col-sm-9">
+    <div class="col-xs-12 col-sm-9 content">
 
       <nav class="navbar navbar-default" role="navigation">
       </nav>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-21 15:46:04
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 22:40:07
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/utilizadores/view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:232809210528a4326819395-25618846%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '02cd97492f50531cea2d29a04c6d738a86b99f4b' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/utilizadores/view.tpl',
-      1 => 1385045065,
+      1 => 1385329206,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_528a43268b77a6_94081366',
   'variables' => 
   array (
-    'session_id' => 0,
+    'user' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -41,30 +41,63 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body class="_profile">
-  <div class="row row-offcanvas row-offcanvas-left">
+  <div class="row">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-    <div class="col-xs-12 col-sm-9">
+    <div class="col-xs-12 col-sm-9 content">
 
-      <nav class="navbar navbar-default" role="navigation">
-      </nav>
-
-      <p class="pull-left visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
-
-      <div class="jumbotron">
-        <h2>Perfil de Utilizador com id: <?php echo $_smarty_tpl->tpl_vars['session_id']->value;?>
-</h2>
+      <div class="page-header">
+        <h1><span class="glyphicon glyphicon-user"></span> <?php echo $_smarty_tpl->tpl_vars['user']->value['NomeCliente'];?>
+ <small>código cliente: <?php echo $_smarty_tpl->tpl_vars['user']->value['CodCliente'];?>
+</small></h1>
       </div>
+
+      <div class="container">
+        <p>Contribuinte #<?php echo $_smarty_tpl->tpl_vars['user']->value['NumContribuinte'];?>
+</p>
+        <address>
+          <?php echo $_smarty_tpl->tpl_vars['user']->value['Morada'];?>
+<br>
+          <?php echo $_smarty_tpl->tpl_vars['user']->value['Local'];?>
+, <?php echo $_smarty_tpl->tpl_vars['user']->value['Codigo_Postal'];?>
+<br>
+          <abbr title="Telefone">Tlf:</abbr> <?php echo $_smarty_tpl->tpl_vars['user']->value['Telefone'];?>
+
+        </address>
+      </div>
+
+      <!-- <canvas id="myChart" width="760" height="300"></canvas> -->
+  
     </div>
 
   </div><!--/row-->
 
   <?php echo $_smarty_tpl->getSubTemplate ("../common/js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
+
+
+  <script>
+  var data = {
+    labels : ["Janeiro 2013","Fevereiro 2013","Março 2013","Abril 2013","Maio 2013","Junho 2013","Julho 2013"],
+    datasets : [
+    {
+      fillColor : "rgba(220,220,220,0.5)",
+      strokeColor : "#77cc33",
+      pointColor : "#77cc33",
+      pointStrokeColor : "#fff",
+      data : [2,0,3,4,1,1,6]
+    }
+    ]
+  }
+
+    //Get the context of the canvas element we want to select
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myNewChart = new Chart(ctx).Line(data);
+
+
+  </script>
 </body>
 </html>
 <?php }} ?>

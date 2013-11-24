@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 15:57:15
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 18:58:28
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1385305034,
+      1 => 1385315906,
       2 => 'file',
     ),
   ),
@@ -80,8 +80,8 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
 foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
 $_smarty_tpl->tpl_vars['package']->_loop = true;
 ?>
-
-          <div class="package">
+          <div class="package" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+">
             <div class="package-header">
               <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
 <span class="pull-right">#<?php echo $_smarty_tpl->tpl_vars['package']->value['NumDoc'];?>
@@ -103,9 +103,14 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
 €</h4>
                 <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
               </div>
-              <div class="col-sm-3"><button type="button" class="btn btn-default btn-sm" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
-">ver detalhes</button></div>
+              <div class="col-sm-3">
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['numProdutos'];?>
+</h4>
+                <p><span class="glyphicon glyphicon-barcode"></span> produto<?php if ($_smarty_tpl->tpl_vars['package']->value['numProdutos']!=1){?>s<?php }?></p>
+              </div>
             </div>
+            <!-- <button type="button" class="btn btn-default btn-sm" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+">ver detalhes</button> -->
           </div>
           <?php } ?>
         </div>

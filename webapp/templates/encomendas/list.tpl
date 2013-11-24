@@ -46,8 +46,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 packages">
           {foreach $packages as $package}
-
-          <div class="package">
+          <div class="package" data-package-id="{$package.id}">
             <div class="package-header">
               <h5>ID: {$package.id}<span class="pull-right">#{$package.NumDoc}</span></h5>
             </div>
@@ -64,8 +63,12 @@
                 <h4>{$package.TotalMerc}€</h4>
                 <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
               </div>
-              <div class="col-sm-3"><button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button></div>
+              <div class="col-sm-3">
+                <h4>{$package.numProdutos}</h4>
+                <p><span class="glyphicon glyphicon-barcode"></span> produto{if $package.numProdutos != 1}s{/if}</p>
+              </div>
             </div>
+            <!-- <button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button> -->
           </div>
           {/foreach}
         </div>

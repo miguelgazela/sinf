@@ -16,6 +16,7 @@
     foreach($packages as &$package) {
         $package['DataInicio'] = UtilFunctions::prettyDate($package['DataInicio']);
         $package['DataFim'] = UtilFunctions::prettyDate($package['DataFim']);
+        $package['numProdutos'] = count($package['LinhasDoc']);
     }
 
     // send data to smarty and display it
