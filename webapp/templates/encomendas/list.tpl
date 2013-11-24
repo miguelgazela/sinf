@@ -44,52 +44,32 @@
       </nav>
 
       <div class="row">
-        <div class="col-md-12 packages">
+        <div class="col-sm-12 col-md-12 packages">
           {foreach $packages as $package}
+
           <div class="package">
-            <h5>ID: {$package.id}</h5>
-          </div>
-          <div class="package">
-            <h5>ID: {$package.id}</h5>
-          </div>
-          <div class="package">
-            <h5>ID: {$package.id}</h5>
+            <div class="package-header">
+              <h5>ID: {$package.id}<span class="pull-right">#{$package.NumDoc}</span></h5>
+            </div>
+            <div class="row package-footer">
+              <div class="col-sm-3">
+                <h4>{$package.DataInicio}</h4>
+                <p><span class="glyphicon glyphicon-calendar"></span> data pedido</p>
+              </div>
+              <div class="col-sm-3">
+                <h4>{$package.DataFim}</h4>
+                <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
+              </div>
+              <div class="col-sm-3">
+                <h4>{$package.TotalMerc}€</h4>
+                <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
+              </div>
+              <div class="col-sm-3"><button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button></div>
+            </div>
           </div>
           {/foreach}
         </div>
       </div>
-
-      <!-- <div class="panel panel-default">
-        <div class="panel-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Data início</th>
-                <th>Data fim</th>
-                <th>Estado</th>
-                <th>Valor</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {foreach $packages as $package}
-              <tr>
-                <td class="package-id">{$package.id}</td>
-                <td>{$package.DataInicio}</td>
-                <td>{$package.DataFim}</td>
-                <td>?</td>
-                <td><span class="value">{$package.TotalMerc}€</span></td>
-                <td><button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">+ detalhes</button></td>
-              </tr>
-              {/foreach}
-            </tbody>
-          </table>
-        </div>
-        <div class="panel-footer">
-          <p># Encomendas: {$packages|@count}</p>
-        </div>
-      </div> -->
 
     </div><!--/col-xs-12-->
 

@@ -13,6 +13,11 @@
     $file = $BASE_URL."tmp-data/encomendas.json";
     $packages = json_decode(file_get_contents($file), true);
 
+    foreach($packages as &$package) {
+        $package['DataInicio'] = UtilFunctions::prettyDate($package['DataInicio']);
+        $package['DataFim'] = UtilFunctions::prettyDate($package['DataFim']);
+    }
+
     // send data to smarty and display it
     $smarty->assign('packages', $packages);
     $smarty->assign('type', $_GET['type']);

@@ -3,7 +3,7 @@
         "id": "{702F4F42-1C57-11E3-8FD6-0800276FC947}",
         "Entidade": "VD",
         "NumDoc": 1,
-        "DataInicio": "2013-09-13T00:00:00",
+        "DataInicio": "2013-09-13T19:23:00",
         "DataFim": "2013-09-13T00:00:00",
         "TotalMerc": 14,
         "Serie": "2013",
@@ -20,7 +20,7 @@
                 "TotalILiquido": 14,
                 "TotalLiquido": 14,
                 "Entregue": "P",
-                "DataEntrega": "2013-09-13T00:00:00"
+                "DataEntrega": "2013-09-13T19:23:00"
             }
         ]
     },

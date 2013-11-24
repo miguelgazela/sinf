@@ -20,4 +20,5 @@
     require_once('session.php');
     require_once('smarty.php');
     require_once('functions.php');
+    require_once('utilfunctions.php');
 ?>
