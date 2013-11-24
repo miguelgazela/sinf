@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 12:05:19
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 13:46:20
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1385291117,
+      1 => 1385297177,
       2 => 'file',
     ),
   ),
@@ -46,7 +46,8 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 <body>
 
-  <div class="row row-offcanvas row-offcanvas-left">
+  <!-- <div class="row row-offcanvas row-offcanvas-left"> -->
+  <div class="row">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -72,7 +73,30 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
         </form>
       </nav>
 
-      <div class="panel panel-default">
+      <div class="row">
+        <div class="col-md-12 packages">
+          <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['packages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
+$_smarty_tpl->tpl_vars['package']->_loop = true;
+?>
+          <div class="package">
+            <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+</h5>
+          </div>
+          <div class="package">
+            <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+</h5>
+          </div>
+          <div class="package">
+            <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+</h5>
+          </div>
+          <?php } ?>
+        </div>
+      </div>
+
+      <!-- <div class="panel panel-default">
         <div class="panel-body">
           <table class="table">
             <thead>
@@ -112,11 +136,8 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
           <p># Encomendas: <?php echo count($_smarty_tpl->tpl_vars['packages']->value);?>
 </p>
         </div>
-      </div>
+      </div> -->
 
-      <p class="pull-left visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
     </div><!--/col-xs-12-->
 
   </div><!--/row-->

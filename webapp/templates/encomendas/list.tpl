@@ -17,7 +17,8 @@
 
 <body>
 
-  <div class="row row-offcanvas row-offcanvas-left">
+  <!-- <div class="row row-offcanvas row-offcanvas-left"> -->
+  <div class="row">
 
     {include file="sidebar.tpl"}
 
@@ -42,7 +43,23 @@
         </form>
       </nav>
 
-      <div class="panel panel-default">
+      <div class="row">
+        <div class="col-md-12 packages">
+          {foreach $packages as $package}
+          <div class="package">
+            <h5>ID: {$package.id}</h5>
+          </div>
+          <div class="package">
+            <h5>ID: {$package.id}</h5>
+          </div>
+          <div class="package">
+            <h5>ID: {$package.id}</h5>
+          </div>
+          {/foreach}
+        </div>
+      </div>
+
+      <!-- <div class="panel panel-default">
         <div class="panel-body">
           <table class="table">
             <thead>
@@ -72,11 +89,8 @@
         <div class="panel-footer">
           <p># Encomendas: {$packages|@count}</p>
         </div>
-      </div>
+      </div> -->
 
-      <p class="pull-left visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
     </div><!--/col-xs-12-->
 
   </div><!--/row-->
