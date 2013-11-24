@@ -10,46 +10,9 @@ html, body {
   height: 100%;
 }
 
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
-    /*left: -50%;  6 columns */
-  }
-
-  .row-offcanvas-left.active {
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -o-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
-    /*left: 50%;  6 columns */
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
-}
-
 .row {
   margin: 0;
+  min-height: 100%;
   height: 100%;
   background-color: #fff;
 }
@@ -61,40 +24,58 @@ html, body {
 
 .sidebar-offcanvas {
   height: 100%;
-  background-color: #d5d7d7;
-  color: #666;
-  position: relative;
+  background-color: #FCFBF7;
+  color: #75767D;
+  position: fixed;
   padding-bottom: 50px; /* for the logout button */
+  box-shadow: inset -5px 1px 10px -6px #ccc;
+  overflow: auto;
+}
+
+.content {
+  margin-left: 25%;
+  color: #75767D;
 }
 
 .sidebar-offcanvas > .media {
   padding: 10px;
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: 1px solid #E9E8E3;
   margin-bottom: 10px;
 }
 
 .sidebar-offcanvas .input-group {
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: 1px solid #E9E8E3;
   padding: 0px 5px 10px 5px;
+}
+
+/* To remove the annoying input top box shadow from ipads */
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .sidebar-offcanvas .input-group > .form-control {
   border-radius: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -o-box-shadow: none;
   box-shadow: none;
 }
 
-.sidebar-offcanvas .input-group > .input-group-addon {
+.input-group-addon {
   border-radius: 0;
 }
 
 .sidebar-offcanvas .list-group-item {
-  background-color: #d5d7d7;
+  background-color: inherit;
   border: 0;
-  color: #666;
-  height: 50px;
-  padding: 15px 15px;
+  color: #75767D;
+  height: 60px;
+  padding: 20px 15px 20px 25px;
+}
+
+.sidebar-offcanvas .list-group-item:last-child {
+  padding-right: 25px;
 }
 
 .sidebar-offcanvas .list-group-item:focus,
@@ -105,9 +86,9 @@ html, body {
 body._search .list-group-item._search,
 body._calendar .list-group-item._calendar,
 body._profile .list-group-item._profile {
-  background-color: #2ecc71;
+  background-color: #77cc33;
   color: #fff;
-  border-color: #c2c2c2;
+  border-color: #77cc33;
 }
 
 .sidebar-offcanvas .list-group-item:first-child,
@@ -116,11 +97,19 @@ body._profile .list-group-item._profile {
 }
 
 .sidebar-offcanvas .list-group-item:not(:first-child) {
-  border-top: 1px solid #c2c2c2;
+  border-top: 1px solid #E9E8E3;
+}
+
+.sidebar-offcanvas .list-group-item:nth-child(5) {
+  border-bottom: 1px solid #E9E8E3;
 }
 
 .sidebar-offcanvas .list-group-item.active > .badge {
-  color: #2ecc71;
+  color: #77cc33;
+}
+
+.list-group-item .glyphicon {
+  margin-right: 8px;
 }
 
 .log-out {
@@ -132,42 +121,56 @@ body._profile .list-group-item._profile {
 }
 
 .navbar {
-  background-color: #2ecc71;
+  background-color: #fff;
   border-radius: 0;
   border: 0;
-  margin-bottom: 0;
+  border-bottom: 1px solid #E9E8E3;
+}
+
+.navbar .input-group-addon {
+  background-color: #fff;
+  padding-right: 0;
+}
+
+.navbar .input-group .form-control {
+  border-left: 0;
+}
+
+.navbar .input-group .form-control:focus {
+  border-color: #ccc;
 }
 
 .navbar .dropdown.sorting {
-  border-left: 1px solid #fff;
+  border-left: 1px solid #E9E8E3;
+  margin-left: 15px;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
+  color: #75767D;
 }
 
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
-  background-color: #d5d7d7;
+  background-color: #F8F8F8;
   color: #666;
 }
 
 .navbar-default .navbar-nav>.dropdown>a .caret {
   margin-left: 20px;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: #75767D;
+  border-bottom-color: #75767D;
 }
 
 .navbar-default .navbar-nav>li:hover,
 .navbar-default .navbar-nav>li:focus {
-  background-color: #0F8542;
+  background-color: #F8F8F8;
 }
 
 .navbar-default .navbar-nav>.dropdown>a:hover .caret,
 .navbar-default .navbar-nav>.dropdown>a:focus .caret {
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: #75767D;
+  border-bottom-color: #75767D;
 }
 
 .navbar-default .navbar-nav>.open>a .caret,
@@ -179,7 +182,7 @@ body._profile .list-group-item._profile {
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-  color: #fff;
+  color: #75767D;
 }
 
 .navbar .navbar-form .form-control {
@@ -187,31 +190,44 @@ body._profile .list-group-item._profile {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  width: 150px;
-  -webkit-transition: all 0.2s linear;
+  /*-webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  transition: all 0.2s linear;*/
 }
 
-.navbar .navbar-form .form-control:focus {
-  width: 300px;
+.package {
+  border: 1px solid #E9E8E3;
+  margin-bottom: 15px;
+  color: #75767D;
 }
 
-.content .panel {
-  border-radius: 0;
-  height: 100%;
+.package-header {
+  background-color: #F8F8F8;
 }
 
-.panel,
-.table {
-  margin-bottom: 0;
+.package-header h5 {
+  padding: 10px;
+  margin-top: 0;
+  color: inherit;
+  margin: 0;
 }
 
-.panel > .panel-body {
-  padding: 0;
+.package-footer {
+  text-align: center;
+  border-top: 1px solid #E9E8E3;
+  padding: 6px;
 }
 
-.panel-footer p{
-  margin-bottom: 0;
+.package-footer .col-sm-3:last-child {
+  height: 69px; /* a bit stupid, but solved my problem */
+  line-height: 69px;
+}
+
+.package-footer .col-sm-3:not(:first-child) {
+  border-left: 1px solid #E9E8E3;
+}
+
+.package-footer button {
+  color: #75767D;
 }

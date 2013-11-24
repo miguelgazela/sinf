@@ -17,7 +17,8 @@
 
 <body>
 
-  <div class="row row-offcanvas row-offcanvas-left">
+  <!-- <div class="row row-offcanvas row-offcanvas-left"> -->
+  <div class="row">
 
     {include file="sidebar.tpl"}
 
@@ -34,48 +35,42 @@
             </ul>
           </li>
         </ul>
-        <form action="#" class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Pesquisa local" onkeyup="narrowResults(this)">
-            </div>
-          </form>
+        <form action="#" class="navbar-form" role="search">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            <input type="text" class="form-control" placeholder="Pesquisa local..." onkeyup="narrowResults(this);">
+          </div>
+        </form>
       </nav>
 
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Data início</th>
-                <th>Data fim</th>
-                <th>Estado</th>
-                <th>Valor</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {foreach $packages as $package}
-              <tr>
-                <td class="package-id">{$package.id}</td>
-                <td>{$package.DataInicio}</td>
-                <td>{$package.DataFim}</td>
-                <td>?</td>
-                <td><span class="value">{$package.TotalMerc}€</span></td>
-                <td><button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">+ detalhes</button></td>
-              </tr>
-              {/foreach}
-            </tbody>
-          </table>
-        </div>
-        <div class="panel-footer">
-          <p># Encomendas: {$packages|@count}</p>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 packages">
+          {foreach $packages as $package}
+
+          <div class="package">
+            <div class="package-header">
+              <h5>ID: {$package.id}<span class="pull-right">#{$package.NumDoc}</span></h5>
+            </div>
+            <div class="row package-footer">
+              <div class="col-sm-3">
+                <h4>{$package.DataInicio}</h4>
+                <p><span class="glyphicon glyphicon-calendar"></span> data pedido</p>
+              </div>
+              <div class="col-sm-3">
+                <h4>{$package.DataFim}</h4>
+                <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
+              </div>
+              <div class="col-sm-3">
+                <h4>{$package.TotalMerc}€</h4>
+                <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
+              </div>
+              <div class="col-sm-3"><button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button></div>
+            </div>
+          </div>
+          {/foreach}
         </div>
       </div>
 
-      <p class="pull-left visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
     </div><!--/col-xs-12-->
 
   </div><!--/row-->
