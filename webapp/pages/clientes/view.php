@@ -14,5 +14,5 @@
     // display smarty template
     $smarty->assign('user', $user['m_Item1']);
     $smarty->assign('packages', $user['m_Item2']);
-    $smarty->display('utilizadores/view.tpl');
+    $smarty->display('clientes/view.tpl');
 ?>

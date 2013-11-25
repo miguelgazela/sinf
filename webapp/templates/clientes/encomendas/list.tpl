@@ -79,6 +79,6 @@
 
   </div><!--/row-->
 
-  {include file="../common/js.tpl"}
+  {include file="common/js.tpl"}
 </body>
 </html>

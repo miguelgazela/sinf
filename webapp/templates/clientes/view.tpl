@@ -10,7 +10,7 @@
 
   <title>Perfil de Utilizador</title>
 
-  {include file="../common/css.tpl"}
+  {include file="common/css.tpl"}
 
 </head>
 
@@ -40,7 +40,7 @@
 
   </div><!--/row-->
 
-  {include file="../common/js.tpl"}
+  {include file="common/js.tpl"}
 
 
   <script>
