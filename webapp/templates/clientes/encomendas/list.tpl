@@ -66,6 +66,7 @@
               <div class="col-sm-3">
                 <h4>{$package.numProdutos}</h4>
                 <p><span class="glyphicon glyphicon-barcode"></span> produto{if $package.numProdutos != 1}s{/if}</p>
+
               </div>
             </div>
             <!-- <button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button> -->
