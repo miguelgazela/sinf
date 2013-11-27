@@ -8,9 +8,9 @@
 
     // development paths
     
-    $BASE_URL = "http://192.168.1.6:8888/sinf/webapp/";
-    $BASE_PATH = '/Users/migueloliveira/Dropbox/projects/sinf/webapp/';
-    //$BASE_PATH = '/Users/nelsonmendes/Documents/Git/sinf/webapp/';
+    $BASE_URL = "http://localhost:8888/sinf/webapp/";
+    //$BASE_PATH = '/Users/migueloliveira/Dropbox/projects/sinf/webapp/';
+    $BASE_PATH = '/Users/nelsonmendes/Documents/Git/sinf/webapp/';
 
     // Slim Framework
     include_once ($BASE_PATH .'libs/Slim/Slim.php');

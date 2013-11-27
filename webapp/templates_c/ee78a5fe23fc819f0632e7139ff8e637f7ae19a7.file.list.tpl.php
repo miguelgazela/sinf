@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-22 18:45:53
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 12:13:09
          compiled from "/Users/nelsonmendes/Documents/Git/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1155938848528a8ee256c990-54012854%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ee78a5fe23fc819f0632e7139ff8e637f7ae19a7' => 
     array (
       0 => '/Users/nelsonmendes/Documents/Git/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1385118308,
+      1 => 1385552924,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASE_URL' => 0,
     'packages' => 0,
     'package' => 0,
+    'typeUser' => 0,
+    'type' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -46,7 +48,8 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 <body>
 
-  <div class="row row-offcanvas row-offcanvas-left">
+  <!-- <div class="row row-offcanvas row-offcanvas-left"> -->
+  <div class="row">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -64,63 +67,76 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
             </ul>
           </li>
         </ul>
-        <form action="#" class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Pesquisa local" onkeyup="narrowResults(this)">
-            </div>
-          </form>
+        <form action="#" class="navbar-form" role="search">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            <input type="text" class="form-control" placeholder="Pesquisa local..." onkeyup="narrowResults(this);">
+          </div>
+        </form>
       </nav>
 
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Data início</th>
-                <th>Data fim</th>
-                <th>Estado</th>
-                <th>Valor</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
+      <div class="row">
+        <div class="col-sm-12 col-md-12 packages">
+          <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['packages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
 $_smarty_tpl->tpl_vars['package']->_loop = true;
 ?>
-              <tr>
-                <td class="package-id"><?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
-</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['package']->value['DataInicio'];?>
-</td>
-                <td><?php echo $_smarty_tpl->tpl_vars['package']->value['DataFim'];?>
-</td>
-                <td>?</td>
-                <td><span class="value"><?php echo $_smarty_tpl->tpl_vars['package']->value['TotalMerc'];?>
-€</span></td>
-                <td><button type="button" class="btn btn-default btn-sm" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
-">+ detalhes</button></td>
-              </tr>
-              <?php } ?>
-            </tbody>
-          </table>
-        </div>
-        <div class="panel-footer">
-          <p># Encomendas: <?php echo count($_smarty_tpl->tpl_vars['packages']->value);?>
-</p>
+          <div class="package" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+">
+            <div class="package-header">
+              <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=='manager'){?>
+              <h5>#<?php echo $_smarty_tpl->tpl_vars['package']->value['codEncomenda'];?>
+ - ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>
+<span class="pull-right">Cliente: <a href="#"><?php echo $_smarty_tpl->tpl_vars['package']->value['codCliente'];?>
+</a></span></h5>
+              <?php }else{ ?>
+              <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>
+<span class="pull-right">#<?php echo $_smarty_tpl->tpl_vars['package']->value['codEncomenda'];?>
+</span></h5>
+              <?php }?>
+            </div>
+            <div class="row package-footer">
+              <div class="col-sm-3">
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['DataInicio'];?>
+</h4>
+                <p><span class="glyphicon glyphicon-calendar"></span> data pedido</p>
+              </div>
+              <div class="col-sm-3">
+                <?php if ($_smarty_tpl->tpl_vars['type']->value=="inactive"){?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['DataFim'];?>
+</h4>
+                <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
+                <?php }else{ ?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['Estado'];?>
+</h4>
+                <p><span class="glyphicon glyphicon-question-sign"></span> estado</p>
+                <?php }?>
+              </div>
+              <div class="col-sm-3">
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['totalMerc'];?>
+€</h4>
+                <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
+              </div>
+              <div class="col-sm-3">
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['numProdutos'];?>
+</h4>
+                <p><span class="glyphicon glyphicon-barcode"></span> produto<?php if ($_smarty_tpl->tpl_vars['package']->value['numProdutos']!=1){?>s<?php }?></p>
+
+              </div>
+            </div>
+            <!-- <button type="button" class="btn btn-default btn-sm" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+">ver detalhes</button> -->
+          </div>
+          <?php } ?>
         </div>
       </div>
 
-      <p class="pull-left visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
     </div><!--/col-xs-12-->
 
   </div><!--/row-->
 
-  <?php echo $_smarty_tpl->getSubTemplate ("../common/js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+  <?php echo $_smarty_tpl->getSubTemplate ("common/js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 </body>
 </html>

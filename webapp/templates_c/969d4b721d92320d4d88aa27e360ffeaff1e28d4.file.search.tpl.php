@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-22 19:04:45
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 12:36:58
          compiled from "/Users/nelsonmendes/Documents/Git/sinf/webapp/templates/encomendas/search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1398449017528faacdd06ca5-86674518%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '969d4b721d92320d4d88aa27e360ffeaff1e28d4' => 
     array (
       0 => '/Users/nelsonmendes/Documents/Git/sinf/webapp/templates/encomendas/search.tpl',
-      1 => 1385118308,
+      1 => 1385555763,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.13',
   'unifunc' => 'content_528faacdd74392_73276525',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_528faacdd74392_73276525')) {function content_528faacdd74392_73276525($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
@@ -36,12 +36,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body class="_search">
-  <div class="row row-offcanvas row-offcanvas-left">
+  <div class="row">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
-    <div class="col-xs-12 col-sm-9">
+    <div class="col-xs-12 col-sm-9 content">
 
       <nav class="navbar navbar-default" role="navigation">
       </nav>
@@ -53,6 +53,54 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="jumbotron">
         <h2>Pesquisa Avançada</h2>
       </div>
+      <div id="div_formSearch" class="col-lg-6">
+    <form id="formSearch" method="post" >
+      Codigo da encomenda: <input type="text" class="form-control" name="codEncomenda" pattern="\w*" />
+      <br>
+      Data do inicio: <input type="text" class="form-control" name="dateInit" placeholder="DD-MM-AAAA" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]<?php echo 4;?>
+"/>
+      Data de fim: <input type="text" class="form-control" name="dateEnd" placeholder="DD-MM-AAAA" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]<?php echo 4;?>
+"/>
+      <br>
+      Preco: <input type="text" class="form-control" name="price" pattern="^(?=.*\d)\d*(?:\.\d\d)?$"/>
+      <br>
+      Artigos:
+      <br>
+      <table>
+        <tr>
+          <td>
+            <input type="checkbox" id="rosas" value="Rosas"> Rosas
+          </td>
+          <td>
+            <input type="checkbox" id="tulipas" value="Tulipas"> Tulipas
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="alecrim" value="Alecrim"> Alecrim
+          </td>
+          <td>
+            <input type="checkbox" id="tesoura" value="Tesoura de Podar"> Tesoura de Podar
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="adubo" value="Adubo Floral"> Adubo Floral
+          </td>
+          <td>
+            <input type="checkbox" id="criacao" value="Criacao de Arranjos Florais"> Criacao de Arranjos Florais
+          </td>
+        </tr>
+      </table>
+      <br>
+      Morada: <input type="text" class="form-control" name="address"/>
+      <br>
+      Quantidade: <input type="number" class="form-control" name="quantidade" min="1" max="20"/>
+      <br>
+      <br>
+      <input type="submit" class="btn btn-default" value="Procurar"/>
+    </form>
+  </div>
     </div>
 
   </div><!--/row-->
