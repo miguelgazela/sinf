@@ -49,14 +49,21 @@ class UtilFunctions {
                     if($diff_day < 7) {
                         return $diff_day."d ago";
                     } else {
-                        $date = getdate(strtotime($date));
-                        $now = getdate($now);
+                        // $date = getdate(strtotime($date));
+                        // $now = getdate($now);
 
-                        if($date['year'] == $now['year']) {
-                            return substr($date['month'], 0, 3)." ".$date['mday']." at ".$date['hours'].":".$date['minutes'];
-                        } else {
-                            return $date['year']." ".substr($date['month'], 0, 3)." ".$date['mday']." at ".$date['hours'].":".$date['minutes'];
-                        }
+                        // $date = 
+                        // $now = date("d-m-Y H:i", $now);
+
+                        return date("d-m-Y H:i", strtotime($date));
+
+                        // if($date['year'] == $now['year']) {
+                        //     return date("d-m-Y H:i", strtotime($date));
+                        //     // return substr($date['month'], 0, 3)." ".$date['mday']." at ".$date['hours'].":".$date['minutes'];
+                        // } else {
+
+                        //     return $date['year']." ".substr($date['month'], 0, 3)." ".$date['mday']." at ".$date['hours'].":".$date['minutes'];
+                        // }
                     }
                 }
             }

@@ -11,48 +11,27 @@
 
   <title>Signin Template for Bootstrap</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/login.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="signin.css" rel="stylesheet">
+  {include file="common/css.tpl"}
 
 </head>
 
-<body>
+<body class="login">
 
   <div class="container">
-    <div class="row">
+    <h2 class="text-center">BelaFlor Log in</h2>
 
-      <div class="main">
-
-        <h3>Please Log In</h3>
-        
-
-        <form role="form">
-          <div class="form-group">
-            <label for="inputUsernameEmail">Username or email</label>
-            <input type="text" class="form-control" id="inputUsernameEmail">
-          </div>
-          <div class="form-group">
-            <a class="pull-right" href="#">Forgot password?</a>
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" id="inputPassword">
-          </div>
-          <div class="checkbox pull-right">
-            <label>
-              <input type="checkbox">
-              Remember me </label>
-            </div>
-            <button type="submit" class="btn btn btn-primary">
-              Log In
-            </button>
-          </form>
-          
-        </div>
-        
+    <form role="form">
+      <div class="form-group">
+        <label for="inputUsernameEmail">NIF</label>
+        <input type="text" class="form-control" id="inputUsernameEmail">
       </div>
-    </div>
-  </body>
-  </html>
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword">
+      </div>
+      <button type="submit" class="btn btn btn-default pull-right">LOGIN</button>
+    </form>
+
+  </div>
+</body>
+</html>

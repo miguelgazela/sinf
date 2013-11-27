@@ -10,6 +10,46 @@ html, body {
   height: 100%;
 }
 
+.login {
+  background-color: #77cc33;
+}
+
+.login .container {
+  max-width: 320px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 80px;
+}
+
+.login form {
+  margin-top: 40px;
+}
+
+.login form input {
+  background-color: #77cc33;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.login .form-control:focus {
+  border-color: #fff;
+  color: #fff;
+}
+
+.login button {
+  width: 100%;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 1px;
+  background-color: #fff;
+  color: #77cc33;
+}
+
 .row {
   margin: 0;
   min-height: 100%;
