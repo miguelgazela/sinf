@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-25 12:16:23
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 10:50:44
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1486733428528df6c7008fe9-62923876%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '34617e1c56f7e71ecc92001172659397704bba2a' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/sidebar.tpl',
-      1 => 1385377851,
+      1 => 1385545830,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'BASE_URL' => 0,
     'type' => 0,
+    'packages' => 0,
     'session_id' => 0,
   ),
   'has_nocache_code' => false,
@@ -49,7 +50,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 pages/clientes/encomendas/list.php?type=active" class="list-group-item <?php if ($_smarty_tpl->tpl_vars['type']->value=='active'){?>active<?php }?>">
       <span class=".glyphicon .glyphicon-list"></span>
       <span class="glyphicon glyphicon-list"></span> Encomendas Ativas
-      <span class="badge pull-right">42</span>
+      <?php if (count($_smarty_tpl->tpl_vars['packages']->value)>0){?>
+        <span class="badge pull-right"><?php echo count($_smarty_tpl->tpl_vars['packages']->value);?>
+</span>
+      <?php }?>
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/clientes/encomendas/list.php?type=inactive" class="list-group-item <?php if ($_smarty_tpl->tpl_vars['type']->value=='inactive'){?>active<?php }?>">

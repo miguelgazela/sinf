@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-25 12:20:49
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 11:00:36
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/clientes/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:442506285529331870beb41-07878996%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f71bfd3ac2e534490e6ced27980d9919fdd070c0' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/clientes/encomendas/list.tpl',
-      1 => 1385378446,
+      1 => 1385546434,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASE_URL' => 0,
     'packages' => 0,
     'package' => 0,
+    'type' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -94,9 +95,15 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
                 <p><span class="glyphicon glyphicon-calendar"></span> data pedido</p>
               </div>
               <div class="col-sm-3">
+                <?php if ($_smarty_tpl->tpl_vars['type']->value=="inactive"){?>
                 <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['DataFim'];?>
 </h4>
                 <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
+                <?php }else{ ?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['Estado'];?>
+</h4>
+                <p><span class="glyphicon glyphicon-question-sign"></span> estado</p>
+                <?php }?>
               </div>
               <div class="col-sm-3">
                 <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['TotalMerc'];?>

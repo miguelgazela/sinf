@@ -56,8 +56,13 @@
                 <p><span class="glyphicon glyphicon-calendar"></span> data pedido</p>
               </div>
               <div class="col-sm-3">
+                {if $type == "inactive"}
                 <h4>{$package.DataFim}</h4>
                 <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
+                {else}
+                <h4>{$package.Estado}</h4>
+                <p><span class="glyphicon glyphicon-question-sign"></span> estado</p>
+                {/if}
               </div>
               <div class="col-sm-3">
                 <h4>{$package.TotalMerc}€</h4>

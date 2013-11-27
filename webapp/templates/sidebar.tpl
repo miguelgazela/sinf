@@ -21,7 +21,9 @@
     <a href="{$BASE_URL}pages/clientes/encomendas/list.php?type=active" class="list-group-item {if $type == 'active'}active{/if}">
       <span class=".glyphicon .glyphicon-list"></span>
       <span class="glyphicon glyphicon-list"></span> Encomendas Ativas
-      <span class="badge pull-right">42</span>
+      {if count($packages) > 0}
+        <span class="badge pull-right">{count($packages)}</span>
+      {/if}
     </a>
     <a href="{$BASE_URL}pages/clientes/encomendas/list.php?type=inactive" class="list-group-item {if $type == 'inactive'}active{/if}">
       <span class="glyphicon glyphicon-check"></span> Histórico
