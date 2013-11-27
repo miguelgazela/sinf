@@ -31,7 +31,7 @@
         <h2>Pesquisa Avançada</h2>
       </div>
       <div id="div_formSearch" class="col-lg-6">
-    <form id="formSearch" method="post" >
+    <form id="formSearch" method="post" action="{$BASE_URL}actions/encomendas/search.php">
       Codigo da encomenda: <input type="text" class="form-control" name="codEncomenda" pattern="\w*" />
       <br>
       Data do inicio: <input type="text" class="form-control" name="dateInit" placeholder="DD-MM-AAAA" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]{4}"/>
@@ -44,26 +44,26 @@
       <table>
         <tr>
           <td>
-            <input type="checkbox" id="rosas" value="Rosas"> Rosas
+            <input type="checkbox" value="Rosas" name="rosas"> Rosas
           </td>
           <td>
-            <input type="checkbox" id="tulipas" value="Tulipas"> Tulipas
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="alecrim" value="Alecrim"> Alecrim
-          </td>
-          <td>
-            <input type="checkbox" id="tesoura" value="Tesoura de Podar"> Tesoura de Podar
+            <input type="checkbox" value="Tulipas" name="tulipas"> Tulipas
           </td>
         </tr>
         <tr>
           <td>
-            <input type="checkbox" id="adubo" value="Adubo Floral"> Adubo Floral
+            <input type="checkbox" value="Alecrim" name="alecrim"> Alecrim
           </td>
           <td>
-            <input type="checkbox" id="criacao" value="Criacao de Arranjos Florais"> Criacao de Arranjos Florais
+            <input type="checkbox" value="Tesoura de Podar" name="tesoura"> Tesoura de Podar
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" value="Adubo Floral" name="adubo"> Adubo Floral
+          </td>
+          <td>
+            <input type="checkbox" value="Criacao de Arranjos Florais" name="criacao"> Criacao de Arranjos Florais
           </td>
         </tr>
       </table>
