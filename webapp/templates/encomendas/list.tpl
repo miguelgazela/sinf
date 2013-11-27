@@ -48,7 +48,11 @@
           {foreach $packages as $package}
           <div class="package" data-package-id="{$package.id}">
             <div class="package-header">
-              <h5>ID: {$package.id}<span class="pull-right">#{$package.NumDoc}</span></h5>
+              {if $typeUser == 'manager'}
+              <h5>#{$package.codEncomenda} - ID: {$package.idPrimaveraEncomenda}<span class="pull-right">Cliente: <a href="#">{$package.codCliente}</a></span></h5>
+              {else}
+              <h5>ID: {$package.idPrimaveraEncomenda}<span class="pull-right">#{$package.codEncomenda}</span></h5>
+              {/if}
             </div>
             <div class="row package-footer">
               <div class="col-sm-3">
@@ -65,7 +69,7 @@
                 {/if}
               </div>
               <div class="col-sm-3">
-                <h4>{$package.TotalMerc}€</h4>
+                <h4>{$package.totalMerc}€</h4>
                 <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
               </div>
               <div class="col-sm-3">

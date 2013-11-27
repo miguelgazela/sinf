@@ -33,11 +33,11 @@
     foreach($packages as &$package) {
         $package['DataInicio'] = UtilFunctions::prettyDate($package['DataInicio']);
         $package['DataFim'] = UtilFunctions::prettyDate($package['DataFim']);
-        $package['numProdutos'] = count($package['LinhasDoc']);
+        $package['numProdutos'] = count($package['ListaArtigos']);
         $package['Estado'] = "em progresso";
 
-        foreach($package['LinhasDoc'] as $product) {
-            if($product['Entregue'] == "P") {
+        foreach($package['ListaArtigos'] as $product) {
+            if($product['estadoEntrega'] == "P") {
                 $package['Estado'] = "entrega parcial";
                 break;
             }
@@ -45,6 +45,7 @@
     }
 
     // send data to smarty and display it
+    $smarty->assign('typeUser', 'manager');
     $smarty->assign('packages', $packages);
     $smarty->assign('type', $_GET['type']);
     $smarty->display('encomendas/list.tpl');

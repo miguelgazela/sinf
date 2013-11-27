@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 11:41:08
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 12:17:11
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1385548866,
+      1 => 1385551030,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASE_URL' => 0,
     'packages' => 0,
     'package' => 0,
+    'typeUser' => 0,
     'type' => 0,
   ),
   'has_nocache_code' => false,
@@ -84,9 +85,16 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
           <div class="package" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
 ">
             <div class="package-header">
-              <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
-<span class="pull-right">#<?php echo $_smarty_tpl->tpl_vars['package']->value['NumDoc'];?>
+              <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=='manager'){?>
+              <h5>#<?php echo $_smarty_tpl->tpl_vars['package']->value['codEncomenda'];?>
+ - ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>
+<span class="pull-right">Cliente: <a href="#"><?php echo $_smarty_tpl->tpl_vars['package']->value['codCliente'];?>
+</a></span></h5>
+              <?php }else{ ?>
+              <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>
+<span class="pull-right">#<?php echo $_smarty_tpl->tpl_vars['package']->value['codEncomenda'];?>
 </span></h5>
+              <?php }?>
             </div>
             <div class="row package-footer">
               <div class="col-sm-3">
@@ -106,7 +114,7 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
                 <?php }?>
               </div>
               <div class="col-sm-3">
-                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['TotalMerc'];?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['totalMerc'];?>
 €</h4>
                 <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
               </div>
