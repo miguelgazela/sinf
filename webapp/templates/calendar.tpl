@@ -10,8 +10,8 @@
 
   <title>Calendário</title>
 
-  {include file="../common/css.tpl"}
-  {include file="../common/js.tpl"}
+  {include file="common/css.tpl"}
+  {include file="common/js.tpl"}
 
 
 </head>

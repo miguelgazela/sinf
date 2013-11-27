@@ -17,7 +17,7 @@
 <body class="_profile">
   <div class="row">
 
-    {include file="clientes/sidebar.tpl"}
+    {include file="sidebar.tpl"}
 
     <div class="col-xs-12 col-sm-9 content">
 

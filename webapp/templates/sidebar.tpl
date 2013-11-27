@@ -18,23 +18,23 @@
   </form>
 
   <div class="list-group">
-    <a href="{$BASE_URL}pages/clientes/encomendas/list.php?type=active" class="list-group-item {if $type == 'active'}active{/if}">
+    <a href="{$BASE_URL}pages/encomendas/list.php?type=active" class="list-group-item {if $type == 'active'}active{/if}">
       <span class=".glyphicon .glyphicon-list"></span>
       <span class="glyphicon glyphicon-list"></span> Encomendas Ativas
-      {if count($packages) > 0}
+      {if isset($packages) and count($packages) > 0}
         <span class="badge pull-right">{count($packages)}</span>
       {/if}
     </a>
-    <a href="{$BASE_URL}pages/clientes/encomendas/list.php?type=inactive" class="list-group-item {if $type == 'inactive'}active{/if}">
+    <a href="{$BASE_URL}pages/encomendas/list.php?type=inactive" class="list-group-item {if $type == 'inactive'}active{/if}">
       <span class="glyphicon glyphicon-check"></span> Histórico
     </a>
-    <a href="{$BASE_URL}pages/clientes/encomendas/search.php" class="list-group-item _search">
+    <a href="{$BASE_URL}pages/encomendas/search.php" class="list-group-item _search">
       <span class="glyphicon glyphicon-search"></span> Pesquisa Avançada
     </a>
-    <a href="{$BASE_URL}pages/clientes/encomendas/calendario" class="list-group-item _calendar">
+    <a href="{$BASE_URL}pages/calendar.php" class="list-group-item _calendar">
       <span class="glyphicon glyphicon-calendar"></span> Calendário
     </a>
-    <a href="{$BASE_URL}pages/clientes/view.php?id={$session_id}" class="list-group-item _profile">
+    <a href="{$BASE_URL}pages/auth/view.php" class="list-group-item _profile">
       <span class="glyphicon glyphicon-user"></span> Perfil Utilizador
     </a>
     <a href="{$BASE_URL}pages/auth/logout.php" class="list-group-item log-out">

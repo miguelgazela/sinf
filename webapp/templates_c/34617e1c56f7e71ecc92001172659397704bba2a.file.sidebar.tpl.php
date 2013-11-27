@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 10:50:44
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 11:40:22
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1486733428528df6c7008fe9-62923876%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '34617e1c56f7e71ecc92001172659397704bba2a' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/sidebar.tpl',
-      1 => 1385545830,
+      1 => 1385548794,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASE_URL' => 0,
     'type' => 0,
     'packages' => 0,
-    'session_id' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -47,29 +46,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
   <div class="list-group">
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/clientes/encomendas/list.php?type=active" class="list-group-item <?php if ($_smarty_tpl->tpl_vars['type']->value=='active'){?>active<?php }?>">
+pages/encomendas/list.php?type=active" class="list-group-item <?php if ($_smarty_tpl->tpl_vars['type']->value=='active'){?>active<?php }?>">
       <span class=".glyphicon .glyphicon-list"></span>
       <span class="glyphicon glyphicon-list"></span> Encomendas Ativas
-      <?php if (count($_smarty_tpl->tpl_vars['packages']->value)>0){?>
+      <?php if (isset($_smarty_tpl->tpl_vars['packages']->value)&&count($_smarty_tpl->tpl_vars['packages']->value)>0){?>
         <span class="badge pull-right"><?php echo count($_smarty_tpl->tpl_vars['packages']->value);?>
 </span>
       <?php }?>
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/clientes/encomendas/list.php?type=inactive" class="list-group-item <?php if ($_smarty_tpl->tpl_vars['type']->value=='inactive'){?>active<?php }?>">
+pages/encomendas/list.php?type=inactive" class="list-group-item <?php if ($_smarty_tpl->tpl_vars['type']->value=='inactive'){?>active<?php }?>">
       <span class="glyphicon glyphicon-check"></span> Histórico
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/clientes/encomendas/search.php" class="list-group-item _search">
+pages/encomendas/search.php" class="list-group-item _search">
       <span class="glyphicon glyphicon-search"></span> Pesquisa Avançada
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/clientes/encomendas/calendario" class="list-group-item _calendar">
+pages/calendar.php" class="list-group-item _calendar">
       <span class="glyphicon glyphicon-calendar"></span> Calendário
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/clientes/view.php?id=<?php echo $_smarty_tpl->tpl_vars['session_id']->value;?>
-" class="list-group-item _profile">
+pages/auth/view.php" class="list-group-item _profile">
       <span class="glyphicon glyphicon-user"></span> Perfil Utilizador
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

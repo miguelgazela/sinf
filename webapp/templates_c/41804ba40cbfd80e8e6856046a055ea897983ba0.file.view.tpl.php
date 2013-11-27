@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 11:44:48
-         compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/clientes/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:835876802529332ba4cead0-52461643%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 11:46:03
+         compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/auth/view.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:14040208845295cd6b0b2b77-01841689%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'efb6e04b9fabdfec1491e48904a627bab41ec6f1' => 
+    '41804ba40cbfd80e8e6856046a055ea897983ba0' => 
     array (
-      0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/clientes/view.tpl',
-      1 => 1385548100,
+      0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/auth/view.tpl',
+      1 => 1385549123,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '835876802529332ba4cead0-52461643',
+  'nocache_hash' => '14040208845295cd6b0b2b77-01841689',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_529332ba5b4fa1_53258557',
   'variables' => 
   array (
     'user' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_5295cd6b1469f0_57607579',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_529332ba5b4fa1_53258557')) {function content_529332ba5b4fa1_53258557($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5295cd6b1469f0_57607579')) {function content_5295cd6b1469f0_57607579($_smarty_tpl) {?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body class="_profile">
   <div class="row">
 
-    <?php echo $_smarty_tpl->getSubTemplate ("clientes/sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
     <div class="col-xs-12 col-sm-9 content">
