@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 12:17:11
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-30 16:05:37
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:350983210528a3d5abb3c32-71431304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cdb44b8f9a6480c90bcacaf84aa3127a389eae52' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/list.tpl',
-      1 => 1385551030,
+      1 => 1385823936,
       2 => 'file',
     ),
   ),
@@ -61,9 +61,9 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
           <li class="dropdown sorting">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenar por <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
             </ul>
           </li>
         </ul>
@@ -82,7 +82,7 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
 foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
 $_smarty_tpl->tpl_vars['package']->_loop = true;
 ?>
-          <div class="package" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+          <div class="package" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>
 ">
             <div class="package-header">
               <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=='manager'){?>
@@ -108,7 +108,7 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
 </h4>
                 <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
                 <?php }else{ ?>
-                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['Estado'];?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['estadoEntrega'];?>
 </h4>
                 <p><span class="glyphicon glyphicon-question-sign"></span> estado</p>
                 <?php }?>

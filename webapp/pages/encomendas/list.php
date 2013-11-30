@@ -36,16 +36,13 @@
         $package['numProdutos'] = count($package['ListaArtigos']);
         $package['Estado'] = "em progresso";
 
-        foreach($package['ListaArtigos'] as $product) {
-            if($product['estadoEntrega'] == "P") {
-                $package['Estado'] = "entrega parcial";
-                break;
-            }
+        if($package['perEntrega'] < 100) {
+            $package['Estado'] = "entrega parcial";
         }
     }
 
     // send data to smarty and display it
-    $smarty->assign('typeUser', 'manager');
+    $smarty->assign('typeUser', 'manager'); // TODO temporary
     $smarty->assign('packages', $packages);
     $smarty->assign('type', $_GET['type']);
     $smarty->display('encomendas/list.tpl');

@@ -25,27 +25,17 @@
     <div class="col-xs-12 col-sm-9 content">
       
       <nav class="navbar navbar-default" role="navigation">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown sorting">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenar por <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-            </ul>
-          </li>
-        </ul>
         <form action="#" class="navbar-form" role="search">
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-            <input type="text" class="form-control" placeholder="Pesquisa local..." onkeyup="narrowResults(this);">
+            <input type="text" class="form-control" placeholder="Pesquisa local..." onkeyup="narrowProductResults(this);">
           </div>
         </form>
       </nav>
 
       <div class="row">
         <div class="col-sm-12 col-md-12 packages">
-          {foreach $packages as $package}
+
           <div class="package" data-package-id="{$package.idPrimaveraEncomenda}">
             <div class="package-header">
               {if $typeUser == 'manager'}
@@ -60,7 +50,7 @@
                 <p><span class="glyphicon glyphicon-calendar"></span> data pedido</p>
               </div>
               <div class="col-sm-3">
-                {if $type == "inactive"}
+                {if $package.estadoEntrega != "a entregar"}
                 <h4>{$package.DataFim}</h4>
                 <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
                 {else}
@@ -78,9 +68,42 @@
 
               </div>
             </div>
-            <!-- <button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button> -->
           </div>
+
+          <h4>Percentagem de encomenda entregue: {$package.perEntrega}%</h4>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {$package.perEntrega}%;">
+            </div>
+          </div>
+
+          <h4>Produtos:</h4>
+          {foreach $products as $product name=foo}
+            <div class="product" data-product-id="{$product.idPrimaveraArtigo}">
+              <div class="product-header">
+                <h5>#{$smarty.foreach.foo.iteration} - ID: {$product.idPrimaveraArtigo}<span class="pull-right">Cód. {$product.codArtigo}</span></h5>
+              </div> <!-- product-header -->
+              <div class="row product-footer">
+                <div class="col-sm-3">
+                  <h4>{$product.descricaoArtigo}</h4>
+                  <p><span class="glyphicon glyphicon-question-sign"></span> data pedido</p>
+                </div>
+                <div class="col-sm-3">
+                  <h4>{$product.quantidade}{$product.unidade}</h4>
+                  <p><span class="glyphicon glyphicon-th-large"></span> quantidade</p>
+                </div>
+                <div class="col-sm-3">
+                  <h4>{$product.totalLiquido}€</h4>
+                  <p><span class="glyphicon glyphicon-euro"></span> valor total</p>
+                </div>
+                <div class="col-sm-3">
+                  <h4>{$product.ratingEntrega}</h4>
+                  <p><span class="glyphicon glyphicon-ok"></span> entregue</p>
+
+                </div>
+              </div> <!-- product-footer -->
+            </div> <!-- product -->
           {/foreach}
+          
         </div>
       </div>
 

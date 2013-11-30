@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-24 18:14:27
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 15:59:08
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1538292317528a4323ca1d31-06379937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2f1c001ef70cd818fa36e8645d0954798559fb2a' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/search.tpl',
-      1 => 1385313266,
+      1 => 1385563474,
       2 => 'file',
     ),
   ),
@@ -53,6 +53,54 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="jumbotron">
         <h2>Pesquisa Avançada</h2>
       </div>
+      <div id="div_formSearch" class="col-lg-6">
+    <form id="formSearch" method="post" >
+      Codigo da encomenda: <input type="text" class="form-control" name="codEncomenda" pattern="\w*" />
+      <br>
+      Data do inicio: <input type="text" class="form-control" name="dateInit" placeholder="DD-MM-AAAA" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]<?php echo 4;?>
+"/>
+      Data de fim: <input type="text" class="form-control" name="dateEnd" placeholder="DD-MM-AAAA" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]<?php echo 4;?>
+"/>
+      <br>
+      Preco: <input type="text" class="form-control" name="price" pattern="^(?=.*\d)\d*(?:\.\d\d)?$"/>
+      <br>
+      Artigos:
+      <br>
+      <table>
+        <tr>
+          <td>
+            <input type="checkbox" id="rosas" value="Rosas"> Rosas
+          </td>
+          <td>
+            <input type="checkbox" id="tulipas" value="Tulipas"> Tulipas
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="alecrim" value="Alecrim"> Alecrim
+          </td>
+          <td>
+            <input type="checkbox" id="tesoura" value="Tesoura de Podar"> Tesoura de Podar
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="adubo" value="Adubo Floral"> Adubo Floral
+          </td>
+          <td>
+            <input type="checkbox" id="criacao" value="Criacao de Arranjos Florais"> Criacao de Arranjos Florais
+          </td>
+        </tr>
+      </table>
+      <br>
+      Morada: <input type="text" class="form-control" name="address"/>
+      <br>
+      Quantidade: <input type="number" class="form-control" name="quantidade" min="1" max="20"/>
+      <br>
+      <br>
+      <input type="submit" class="btn btn-default" value="Procurar"/>
+    </form>
+  </div>
     </div>
 
   </div><!--/row-->
