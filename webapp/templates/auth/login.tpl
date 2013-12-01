@@ -20,18 +20,18 @@
   <div class="container">
     <h2 class="text-center">BelaFlor Log in</h2>
 
-    <form role="form">
+    <form role="form" id="login">
       <div class="form-group">
         <label for="inputUsernameEmail">NIF</label>
-        <input type="text" class="form-control" id="inputUsernameEmail">
+        <input type="text" class="form-control" id="inputNif">
       </div>
       <div class="form-group">
         <label for="inputPassword">Password</label>
         <input type="password" class="form-control" id="inputPassword">
       </div>
-      <button type="submit" class="btn btn btn-default pull-right">LOGIN</button>
+      <button id="loginButton" type="submit" class="btn btn btn-default pull-right">LOGIN</button>
     </form>
-
   </div>
+  {include file="common/js.tpl"}
 </body>
 </html>

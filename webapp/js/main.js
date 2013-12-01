@@ -1,4 +1,4 @@
-var BASE_URL = "http://192.168.1.3:8888/sinf/webapp/";
+var BASE_URL = "http://localhost/webapp/";
 var sinfapp = sinfapp || {};
 
 $(document).ready(function(){
@@ -21,6 +21,29 @@ $(document).ready(function(){
     // $.getJSON(BASE_URL+'api/encomendas/1', function(data){
     //     //console.log(data);
     // });
+
+    $('#login').submit(function(event){
+        event.preventDefault();
+
+        var pass = $('#inputPassword').val();
+        var nif = $('#inputNif').val();
+
+        console.log("Pass: "+pass+" Nif: "+nif);
+
+        $.ajax(
+            {
+                url: BASE_URL + 'actions/auth/login.php',
+                data: {'nif':nif, 'pass':pass},
+                dataType: 'json',
+                type:"POST",
+                success: function(data){
+                    //redirect to next page
+                    console.log(data);
+                }
+            }).fail(function() {
+            alert('fail');
+            });
+    });
 
     $('.package').click(function(){
         // console.log($(this).attr('data-package-id'));
