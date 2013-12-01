@@ -46,9 +46,9 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 packages">
           {foreach $packages as $package}
-          <div class="package" data-package-id="{$package.idPrimaveraEncomenda}">
+          <div class="package" data-package-id="{$package.codEncomenda}">
             <div class="package-header">
-              {if $typeUser == 'manager'}
+              {if $typeUser == 'MANAGER'}
               <h5>#{$package.codEncomenda} - ID: {$package.idPrimaveraEncomenda}<span class="pull-right">Cliente: <a href="#">{$package.codCliente}</a></span></h5>
               {else}
               <h5>ID: {$package.idPrimaveraEncomenda}<span class="pull-right">#{$package.codEncomenda}</span></h5>

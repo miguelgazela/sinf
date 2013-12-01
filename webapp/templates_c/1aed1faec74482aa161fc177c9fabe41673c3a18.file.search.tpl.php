@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-30 19:57:05
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-01 23:32:34
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11676529a3501cb1414-91412251%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1aed1faec74482aa161fc177c9fabe41673c3a18' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\search.tpl',
-      1 => 1385837048,
+      1 => 1385937143,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_529a3501cf3aa1_55478349',
   'variables' => 
   array (
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_529a3501cf3aa1_55478349',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_529a3501cf3aa1_55478349')) {function content_529a3501cf3aa1_55478349($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
@@ -46,17 +46,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
     <div class="col-xs-12 col-sm-9 content">
-
-      <nav class="navbar navbar-default" role="navigation">
-      </nav>
-
-      <p class="pull-left visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
-
-      <div class="jumbotron">
-        <h2>Pesquisa Avançada</h2>
+       <div class="page-header">
+        <h1>Pesquisa Avançada</h1>
       </div>
+
       <div id="div_formSearch" class="col-lg-6">
     <form id="formSearch" method="post" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 actions/encomendas/search.php">

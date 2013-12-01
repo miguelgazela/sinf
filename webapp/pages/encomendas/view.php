@@ -2,23 +2,31 @@
     // initialize
     include_once('../../common/init.php');
 
-    if(!isset($_SESSION['session_id'])) {
+    if(!isset($_SESSION['s_id'])) {
         header("Location: $BASE_URL"."pages/auth/login.php");
         die();
     }
 
     // check $_GET['id'] and get the right package from our API
+    if(isset($_GET['id'])){
 
-    // temporary reading from JSON file
-    $file = $BASE_URL."tmp-data/encomendas.json";
-    $packages = json_decode(file_get_contents($file), true);
-    $package = $packages[0];
-    $package['perEntrega'] = round($package['perEntrega']+0);
-    $package['numProdutos'] = count($package['ListaArtigos']);
-    $products = $package['ListaArtigos'];
+        $id = $_GET['id'];
 
-    // send data to smarty and display template
-    $smarty->assign('package', $package);
-    $smarty->assign('products', $products);
-    $smarty->display('encomendas/view.tpl');
+        //$file = $BASE_URL."tmp-data/encomendas.json";
+        $api_url = $BASE_URL_PRIMAVERA."encomendas/".$id;
+        $package = json_decode(file_get_contents($api_url), true);
+        $package['perEntrega'] = round($package['perEntrega']+0);
+        $package['numProdutos'] = count($package['ListaArtigos']);
+        $products = $package['ListaArtigos'];
+
+        // send data to smarty and display template
+        $smarty->assign('package', $package);
+        $smarty->assign('products', $products);
+        $smarty->display('encomendas/view.tpl');
+    } else {
+        echo "Falta ID da encomenda";
+        die();
+    }
+
+    
 ?>

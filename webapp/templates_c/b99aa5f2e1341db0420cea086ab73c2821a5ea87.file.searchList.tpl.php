@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-30 19:57:23
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-02 00:26:32
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\searchList.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9125529a3513eb11e4-40292180%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b99aa5f2e1341db0420cea086ab73c2821a5ea87' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\searchList.tpl',
-      1 => 1385837048,
+      1 => 1385940382,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.13',
+  'unifunc' => 'content_529a3513f2a385_41427410',
   'variables' => 
   array (
     'BASE_URL' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'typeUser' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_529a3513f2a385_41427410',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_529a3513f2a385_41427410')) {function content_529a3513f2a385_41427410($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
@@ -54,7 +54,7 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <div class="col-xs-12 col-sm-9 content">
       
-      <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default" role="navigation" style="margin-bottom:0;">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown sorting">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenar por <b class="caret"></b></a>
@@ -73,21 +73,22 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
         </form>
       </nav>
 	  
-	  <div class="jumbotron">
-        <h2>Resultados da pesquisa</h2>
-      </div>
+        
 
       <div class="row">
+
         <div class="col-sm-12 col-md-12 packages">
+          <h2>Resultados da pesquisa</h2>
+          <br>
           <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['packages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
 $_smarty_tpl->tpl_vars['package']->_loop = true;
 ?>
-          <div class="package" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['id'];?>
+          <div class="package" data-package-id="<?php echo $_smarty_tpl->tpl_vars['package']->value['codEncomenda'];?>
 ">
             <div class="package-header">
-              <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=='manager'){?>
+              <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=='MANAGER'){?>
               <h5>#<?php echo $_smarty_tpl->tpl_vars['package']->value['codEncomenda'];?>
  - ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>
 <span class="pull-right">Cliente: <a href="#"><?php echo $_smarty_tpl->tpl_vars['package']->value['codCliente'];?>

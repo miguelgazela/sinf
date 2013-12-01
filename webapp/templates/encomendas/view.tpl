@@ -38,7 +38,7 @@
 
           <div class="package" data-package-id="{$package.idPrimaveraEncomenda}">
             <div class="package-header">
-              {if $typeUser == 'manager'}
+              {if $typeUser == 'MANAGER'}
               <h5>#{$package.codEncomenda} - ID: {$package.idPrimaveraEncomenda}<span class="pull-right">Cliente: <a href="#">{$package.codCliente}</a></span></h5>
               {else}
               <h5>ID: {$package.idPrimaveraEncomenda}<span class="pull-right">#{$package.codEncomenda}</span></h5>
@@ -85,7 +85,7 @@
               <div class="row product-footer">
                 <div class="col-sm-3">
                   <h4>{$product.descricaoArtigo}</h4>
-                  <p><span class="glyphicon glyphicon-question-sign"></span> data pedido</p>
+                  <p><span class="glyphicon glyphicon-question-sign"></span> descrição</p>
                 </div>
                 <div class="col-sm-3">
                   <h4>{$product.quantidade}{$product.unidade}</h4>

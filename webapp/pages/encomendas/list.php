@@ -2,12 +2,10 @@
     // initialize
     include_once('../../common/init.php');
 
-    // if(!isset($_SESSION['session_id'])) {
-    //     header("Location: $BASE_URL"."login");
-    //     die();
-    // }
-
-    // tem que ir ver se o utilizador loggado é um cliente ou gerente e ir buscar as encomendas com isso
+    if(!isset($_SESSION['s_id'])) {
+        header("Location: $BASE_URL"."pages/auth/login.php");
+        die();
+    }
 
     $packages = Null;
 
@@ -17,7 +15,14 @@
         // $packages = json_decode(file_get_contents($file), true);
 
         // calling our api
-        $api_url = $BASE_URL_PRIMAVERA . 'encomendas';
+        $api_url = Null;
+
+        if($_SESSION['s_userType'] == "CLIENT") {
+            $api_url = $BASE_URL_PRIMAVERA . 'encomendasactivas/'.$_SESSION['s_id'];
+        } else { // MANAGER
+            $api_url = $BASE_URL_PRIMAVERA . 'encomendasactivas';
+        }
+        
         $packages = json_decode(file_get_contents($api_url), true);
         
     } else if($_GET['type'] == "inactive") {
@@ -25,8 +30,15 @@
         // $file = $BASE_URL."tmp-data/encomendas.json";
         // $packages = json_decode(file_get_contents($file), true);
 
-        // calling our api
-        $api_url = $BASE_URL_PRIMAVERA . 'encomendas';
+         // calling our api
+        $api_url = Null;
+
+        if($_SESSION['s_userType'] == "CLIENT") {
+            $api_url = $BASE_URL_PRIMAVERA . 'encomendasentregues/'.$_SESSION['s_id'];
+        } else { // MANAGER
+            $api_url = $BASE_URL_PRIMAVERA . 'encomendasentregues';
+        }
+
         $packages = json_decode(file_get_contents($api_url), true);
     }
 
@@ -44,7 +56,12 @@
 
 
     // send data to smarty and display it
-    $smarty->assign('typeUser', 'manager'); // TODO temporary
+    if($_GET['type'] == "active") {
+        $_SESSION['counterEncomendasAtivas'] = count($packages);
+        $smarty->assign('counterEncomendasAtivas', count($packages));
+    } else {
+         $smarty->assign('counterEncomendasAtivas', $_SESSION['counterEncomendasAtivas']);
+    }
     $smarty->assign('packages', $packages);
     $smarty->assign('type', $_GET['type']);
     $smarty->display('encomendas/list.tpl');

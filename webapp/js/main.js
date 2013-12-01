@@ -37,8 +37,15 @@ $(document).ready(function(){
                 dataType: 'json',
                 type:"POST",
                 success: function(data){
-                    //redirect to next page
                     console.log(data);
+
+                    if(data.result == "OK") {
+                        // redirect to encomendas ativas
+                        window.location = BASE_URL + "pages/encomendas/list.php?type=active";
+                    } else {
+                        // show error message
+                        alert('Dados incorrectos!');
+                    }
                 }
             }).fail(function() {
             alert('fail');

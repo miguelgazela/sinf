@@ -23,7 +23,7 @@
 
     <div class="col-xs-12 col-sm-9 content">
       
-      <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default" role="navigation" style="margin-bottom:0;">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown sorting">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ordenar por <b class="caret"></b></a>
@@ -42,16 +42,17 @@
         </form>
       </nav>
 	  
-	  <div class="jumbotron">
-        <h2>Resultados da pesquisa</h2>
-      </div>
+        
 
       <div class="row">
+
         <div class="col-sm-12 col-md-12 packages">
+          <h2>Resultados da pesquisa</h2>
+          <br>
           {foreach $packages as $package}
-          <div class="package" data-package-id="{$package.id}">
+          <div class="package" data-package-id="{$package.codEncomenda}">
             <div class="package-header">
-              {if $typeUser == 'manager'}
+              {if $typeUser == 'MANAGER'}
               <h5>#{$package.codEncomenda} - ID: {$package.idPrimaveraEncomenda}<span class="pull-right">Cliente: <a href="#">{$package.codCliente}</a></span></h5>
               {else}
               <h5>ID: {$package.idPrimaveraEncomenda}<span class="pull-right">#{$package.codEncomenda}</span></h5>

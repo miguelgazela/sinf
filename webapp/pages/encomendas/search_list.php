@@ -2,13 +2,20 @@
 	// initialize
     include_once('../../common/init.php');
 
-    /*if(!isset($_SESSION['session_id'])) {
-        header("Location: $BASE_URL"."login");
+    if(!isset($_SESSION['s_id'])) {
+        header("Location: $BASE_URL"."pages/auth/login.php");
         die();
-    }*/
+    }
+
+    $api_url = null;
+
+    if($_SESSION['s_userType'] == "CLIENT") {
+            $api_url = 'http://localhost:49499/api/pesquisaavanencomendas/'.$_SESSION['s_id'].'/' . $_GET['search'];
+        } else { // MANAGER
+            $api_url = 'http://localhost:49499/api/pesquisaavanencomendas/' . $_GET['search'];
+        }
 	
-	$api_url = 'http://localhost:49499/api/pesquisaavanencomendas/' . $_GET['search'];
-	echo($api_url);
+	//echo($api_url);
     $packages = json_decode(file_get_contents($api_url), true);
 	
 	foreach($packages as &$package) {
@@ -26,7 +33,6 @@
     }
 
     // send data to smarty and display it
-    $smarty->assign('typeUser', 'manager');
     $smarty->assign('packages', $packages);
 	$smarty->display('encomendas/searchList.tpl');
 

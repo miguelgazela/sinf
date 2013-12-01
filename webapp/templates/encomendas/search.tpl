@@ -19,17 +19,10 @@
     {include file="sidebar.tpl"}
 
     <div class="col-xs-12 col-sm-9 content">
-
-      <nav class="navbar navbar-default" role="navigation">
-      </nav>
-
-      <p class="pull-left visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
-
-      <div class="jumbotron">
-        <h2>Pesquisa Avançada</h2>
+       <div class="page-header">
+        <h1>Pesquisa Avançada</h1>
       </div>
+
       <div id="div_formSearch" class="col-lg-6">
     <form id="formSearch" method="post" action="{$BASE_URL}actions/encomendas/search.php">
       Codigo da encomenda: <input type="text" class="form-control" name="codEncomenda" pattern="\w*" />

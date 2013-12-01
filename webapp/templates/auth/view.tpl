@@ -45,7 +45,7 @@
     <div class="col-xs-12 col-sm-9 content">
 
       <div class="page-header">
-        <h1><span class="glyphicon glyphicon-user"></span> {$user.NomeCliente} <small>código cliente: {$user.CodCliente}</small></h1>
+        <h1><span class="glyphicon glyphicon-user"></span> {$user.NomeCliente} {if $typeUser != "MANAGER"}<small>código cliente: {$user.CodCliente}</small>{/if}</h1>
       </div>
 
       <div class="row">
@@ -53,19 +53,23 @@
           <h4>Informação pessoal</h4>
           <div class="info">
             <p>Número de contribuinte: {$user.NumContribuinte}</p>
+            {if $typeUser != "MANAGER"}
             <h5>Morada</h5>
             <address>
               {$user.Morada}<br>
               {$user.Local}, {$user.Codigo_Postal}<br>
               <abbr title="Telefone">Tlf:</abbr> {$user.Telefone}
             </address>
+            {else}
+            <br>
+            {/if}
           </div>
           
         </div>
         <div class="col-sm-12">
-          <h4>Número de encomendas realizadas</h4>
+          <h4>Número de encomendas realizadas: {$totalEncomendas}</h4>
           <canvas id="myChart" width="730" height="180"></canvas>
-          <h4>Valor gasto</h4>
+          <h4>Valor gasto: {$totalGasto}€</h4>
           <canvas id="myChart2" width="730" height="180"></canvas>
         </div>
       </div>

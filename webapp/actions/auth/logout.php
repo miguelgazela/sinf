@@ -2,7 +2,5 @@
     include_once('../../common/init.php');
 
     session_destroy();
-    // $_SESSION['s_ok'] = 'Logged Out';
-
-    echo "Logout efetuado com sucesso!";
+    header("Location: $BASE_URL"."pages/auth/login.php");
 ?>
