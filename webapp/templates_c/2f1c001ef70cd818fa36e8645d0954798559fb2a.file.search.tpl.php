@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-27 15:59:08
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-30 17:27:02
          compiled from "/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1538292317528a4323ca1d31-06379937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2f1c001ef70cd818fa36e8645d0954798559fb2a' => 
     array (
       0 => '/Users/migueloliveira/Dropbox/projects/sinf/webapp/templates/encomendas/search.tpl',
-      1 => 1385563474,
+      1 => 1385828796,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.13',
   'unifunc' => 'content_528a4323d3ec38_74010886',
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_528a4323d3ec38_74010886')) {function content_528a4323d3ec38_74010886($_smarty_tpl) {?><!DOCTYPE html>
@@ -54,7 +58,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <h2>Pesquisa Avançada</h2>
       </div>
       <div id="div_formSearch" class="col-lg-6">
-    <form id="formSearch" method="post" >
+    <form id="formSearch" method="post" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/encomendas/search.php">
       Codigo da encomenda: <input type="text" class="form-control" name="codEncomenda" pattern="\w*" />
       <br>
       Data do inicio: <input type="text" class="form-control" name="dateInit" placeholder="DD-MM-AAAA" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]<?php echo 4;?>
@@ -69,26 +74,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <table>
         <tr>
           <td>
-            <input type="checkbox" id="rosas" value="Rosas"> Rosas
+            <input type="checkbox" value="Rosas" name="rosas"> Rosas
           </td>
           <td>
-            <input type="checkbox" id="tulipas" value="Tulipas"> Tulipas
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="alecrim" value="Alecrim"> Alecrim
-          </td>
-          <td>
-            <input type="checkbox" id="tesoura" value="Tesoura de Podar"> Tesoura de Podar
+            <input type="checkbox" value="Tulipas" name="tulipas"> Tulipas
           </td>
         </tr>
         <tr>
           <td>
-            <input type="checkbox" id="adubo" value="Adubo Floral"> Adubo Floral
+            <input type="checkbox" value="Alecrim" name="alecrim"> Alecrim
           </td>
           <td>
-            <input type="checkbox" id="criacao" value="Criacao de Arranjos Florais"> Criacao de Arranjos Florais
+            <input type="checkbox" value="Tesoura de Podar" name="tesoura"> Tesoura de Podar
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" value="Adubo Floral" name="adubo"> Adubo Floral
+          </td>
+          <td>
+            <input type="checkbox" value="Criacao de Arranjos Florais" name="criacao"> Criacao de Arranjos Florais
           </td>
         </tr>
       </table>

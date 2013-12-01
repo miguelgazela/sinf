@@ -10,23 +10,23 @@
     $smarty->assign("BASE_URL", $BASE_URL);
 
     // Send error messages to Smarty and delete them
-    $_SESSION['s_error'] = null;
     $smarty->assign("s_error", $_SESSION['s_error']);
-    
+    $_SESSION['s_error'] = null;
     
     // Send ok messages to Smarty and delete them
-     $_SESSION['s_ok'] = null;
     $smarty->assign("s_ok", $_SESSION['s_ok']);
-   
+    $_SESSION['s_ok'] = null;
 
     // Send form values to Smarty and PHP and delete them
-     $_SESSION['s_values'] = null;
     $smarty->assign("s_values", $_SESSION['s_values']);
-    $_values = $_SESSION['s_values'];
-   
+    $_SESSION['s_values'] = null;   
 
     // Send session variables to Smarty
-    $_SESSION['session_id'] = null;
-    //$smarty->assign("s_username", $_SESSION['s_username']);
     $smarty->assign("session_id", $_SESSION['session_id']);
+    //$smarty->assign("s_username", $_SESSION['s_username']);
+    //$smarty->assign("s_typeUser", $_SESSION['s_typeUser']);
+    $_SESSION['session_id'] = null;
+    $_SESSION['s_username'] = null;
+    $_SESSION['s_typeUser'] = null;
+    
 ?>

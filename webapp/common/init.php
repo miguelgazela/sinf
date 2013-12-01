@@ -7,7 +7,6 @@
     //$BASE_PATH = '/usr/users2/mieic2010/ei10076/public_html/projects/agiba/';
 
     // development paths
-    
     $BASE_URL = "http://localhost/webapp/";
     $BASE_PATH = 'C:/xampp/htdocs/webapp/';
     $BASE_URL_PRIMAVERA = "http://localhost:49499/api/";
