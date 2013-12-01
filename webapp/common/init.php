@@ -8,8 +8,9 @@
 
     // development paths
     
-    $BASE_URL = "http://192.168.1.3:8888/sinf/webapp/";
-    $BASE_PATH = '/Users/migueloliveira/Dropbox/projects/sinf/webapp/';
+    $BASE_URL = "http://localhost/webapp/";
+    $BASE_PATH = 'C:/xampp/htdocs/webapp/';
+    $BASE_URL_PRIMAVERA = "http://localhost:49499/api/";
     //$BASE_PATH = '/Users/nelsonmendes/Documents/Git/sinf/webapp/';
 
     // Slim Framework

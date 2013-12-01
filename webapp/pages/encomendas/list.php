@@ -13,7 +13,7 @@
 
     if($_GET['type'] == "active") {
         // temporary reading from JSON file
-        $file = $BASE_URL."tmp-data/encomendas.json";
+        $file = $BASE_URL_PRIMAVERA . 'encomendas';
         $packages = json_decode(file_get_contents($file), true);
 
         // calling our api
@@ -22,7 +22,7 @@
         
     } else if($_GET['type'] == "inactive") {
         // temporary reading from JSON file
-        $file = $BASE_URL."tmp-data/encomendas.json";
+        $file = $BASE_URL_PRIMAVERA . 'encomendas';
         $packages = json_decode(file_get_contents($file), true);
 
         // calling our api
