@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-01 22:59:34
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-02 09:01:50
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:26133529a34e9220852-01122725%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7aaad0741924a5b156677e44e4fc6b28f3a776cc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\list.tpl',
-      1 => 1385935143,
+      1 => 1385974847,
       2 => 'file',
     ),
   ),
@@ -88,7 +88,9 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
               <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=='MANAGER'){?>
               <h5>#<?php echo $_smarty_tpl->tpl_vars['package']->value['codEncomenda'];?>
  - ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>
-<span class="pull-right">Cliente: <a href="#"><?php echo $_smarty_tpl->tpl_vars['package']->value['codCliente'];?>
+<span class="pull-right">Cliente: <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/clientes/view.php?codCliente=<?php echo $_smarty_tpl->tpl_vars['package']->value['codCliente'];?>
+"><?php echo $_smarty_tpl->tpl_vars['package']->value['codCliente'];?>
 </a></span></h5>
               <?php }else{ ?>
               <h5>ID: <?php echo $_smarty_tpl->tpl_vars['package']->value['idPrimaveraEncomenda'];?>

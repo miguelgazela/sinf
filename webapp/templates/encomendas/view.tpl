@@ -39,7 +39,7 @@
           <div class="package" data-package-id="{$package.idPrimaveraEncomenda}">
             <div class="package-header">
               {if $typeUser == 'MANAGER'}
-              <h5>#{$package.codEncomenda} - ID: {$package.idPrimaveraEncomenda}<span class="pull-right">Cliente: <a href="#">{$package.codCliente}</a></span></h5>
+              <h5>#{$package.codEncomenda} - ID: {$package.idPrimaveraEncomenda}<span class="pull-right">Cliente: <a href="{$BASE_URL}pages/clientes/view.php?codCliente={$package.codCliente}">{$package.codCliente}</a></span></h5>
               {else}
               <h5>ID: {$package.idPrimaveraEncomenda}<span class="pull-right">#{$package.codEncomenda}</span></h5>
               {/if}
