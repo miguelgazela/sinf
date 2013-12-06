@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:10:15
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 22:27:57
          compiled from "C:\xampp\htdocs\webapp\templates\auth\view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6903529bb4acc344f1-47264511%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0f791c1a4c53111a558c7fe1cad4165a602e4e85' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\auth\\view.tpl',
-      1 => 1385942195,
+      1 => 1386368870,
       2 => 'file',
     ),
   ),
@@ -90,7 +90,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <p>Número de contribuinte: <?php echo $_smarty_tpl->tpl_vars['user']->value['NumContribuinte'];?>
 </p>
             <?php if ($_smarty_tpl->tpl_vars['typeUser']->value!="MANAGER"){?>
-            <h5>Morada</h5>
+            <h5>Morada:</h5>
             <address>
               <?php echo $_smarty_tpl->tpl_vars['user']->value['Morada'];?>
 <br>

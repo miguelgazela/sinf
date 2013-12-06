@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:27:32
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:47:21
          compiled from "C:\xampp\htdocs\webapp\templates\sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5915529a34e93f9349-81505704%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48bacbeeba11294aef8175f3555d10fae678c028' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\sidebar.tpl',
-      1 => 1386365210,
+      1 => 1386366432,
       2 => 'file',
     ),
   ),
@@ -71,6 +71,12 @@ pages/encomendas/search.php" class="list-group-item _search">
 pages/calendar.php" class="list-group-item _calendar">
       <span class="glyphicon glyphicon-calendar"></span> Calendário
     </a>
+	<?php if ($_smarty_tpl->tpl_vars['typeUser']->value=="CLIENT"){?>
+	<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/encomendas/suggestions.php" class="list-group-item _suggestion">
+      <span class="glyphicon glyphicon-certificate"></span> Sugestões
+    </a>
+	<?php }?>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/auth/view.php" class="list-group-item _profile">
       <span class="glyphicon glyphicon-user"></span> <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=="CLIENT"){?>Perfil Utilizador<?php }else{ ?>Perfil Gerente<?php }?>

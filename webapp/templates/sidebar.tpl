@@ -34,6 +34,11 @@
     <a href="{$BASE_URL}pages/calendar.php" class="list-group-item _calendar">
       <span class="glyphicon glyphicon-calendar"></span> Calendário
     </a>
+	{if $typeUser == "CLIENT"}
+	<a href="{$BASE_URL}pages/encomendas/suggestions.php" class="list-group-item _suggestion">
+      <span class="glyphicon glyphicon-certificate"></span> Sugestões
+    </a>
+	{/if}
     <a href="{$BASE_URL}pages/auth/view.php" class="list-group-item _profile">
       <span class="glyphicon glyphicon-user"></span> {if $typeUser == "CLIENT"}Perfil Utilizador{else}Perfil Gerente{/if}
     </a>

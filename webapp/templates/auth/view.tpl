@@ -54,7 +54,7 @@
           <div class="info">
             <p>Número de contribuinte: {$user.NumContribuinte}</p>
             {if $typeUser != "MANAGER"}
-            <h5>Morada</h5>
+            <h5>Morada:</h5>
             <address>
               {$user.Morada}<br>
               {$user.Local}, {$user.Codigo_Postal}<br>

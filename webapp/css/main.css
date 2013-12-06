@@ -127,7 +127,8 @@ body._search .list-group-item._search,
 body._calendar .list-group-item._calendar,
 body._profile .list-group-item._profile,
 body._list .list-group-item._list,
-body._history .list-group-item._history
+body._history .list-group-item._history,
+body._suggestion .list-group-item._suggestion
  {
   background-color: #77cc33;
   color: #fff;
