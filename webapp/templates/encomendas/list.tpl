@@ -45,7 +45,19 @@
 
       <div class="row">
         <div class="col-sm-12 col-md-12 packages">
-          {foreach $packages as $package}
+
+<ul class="nav nav-tabs" id="tabs">
+  <li><a href="#aprocessar" data-toggle="tab">A processar</a></li>
+  <li><a href="#aentregar" data-toggle="tab">A entregar</a></li>
+  <li><a href="#entregue" data-toggle="tab">Entregues</a></li>
+  <li><a href="#paga" data-toggle="tab">Pagas</a></li>
+  <li><a href="#anuldada" data-toggle="tab">Anuladas</a></li>
+  <li><a href="#devolvida" data-toggle="tab">Devolvidas</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active fade in" id="aprocessar">
+     {foreach $packages as $package}
           <div class="package" data-package-id="{$package.codEncomenda}">
             <div class="package-header">
               {if $typeUser == 'MANAGER'}
@@ -81,6 +93,18 @@
             <!-- <button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button> -->
           </div>
           {/foreach}
+
+          <!--fechar tab -->
+
+  </div>
+  <div class="tab-pane fade" id="aentregar">...</div>
+  <div class="tab-pane fade" id="entregue">...</div>
+  <div class="tab-pane fade" id="paga">...</div>
+  <div class="tab-pane fade" id="anulada">...</div>
+  <div class="tab-pane fade" id="devolvida">...</div>
+</div>
+
+         
         </div>
       </div>
 
@@ -90,4 +114,11 @@
 
   {include file="common/js.tpl"}
 </body>
+
+<script>
+$(window).load(function(){
+   $('#tabs a[href="#aprocessar"]').tab('show');
+});
+   
+</script>
 </html>

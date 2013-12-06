@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-03 10:44:28
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 15:37:40
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:26133529a34e9220852-01122725%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7aaad0741924a5b156677e44e4fc6b28f3a776cc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\list.tpl',
-      1 => 1385975408,
+      1 => 1386344256,
       2 => 'file',
     ),
   ),
@@ -77,7 +77,19 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
       <div class="row">
         <div class="col-sm-12 col-md-12 packages">
-          <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
+
+<ul class="nav nav-tabs" id="tabs">
+  <li><a href="#aprocessar" data-toggle="tab">A processar</a></li>
+  <li><a href="#aentregar" data-toggle="tab">A entregar</a></li>
+  <li><a href="#entregue" data-toggle="tab">Entregues</a></li>
+  <li><a href="#paga" data-toggle="tab">Pagas</a></li>
+  <li><a href="#anuldada" data-toggle="tab">Anuladas</a></li>
+  <li><a href="#devolvida" data-toggle="tab">Devolvidas</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active fade in" id="aprocessar">
+     <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['packages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
 $_smarty_tpl->tpl_vars['package']->_loop = true;
@@ -131,6 +143,18 @@ pages/clientes/view.php?codCliente=<?php echo $_smarty_tpl->tpl_vars['package']-
 ">ver detalhes</button> -->
           </div>
           <?php } ?>
+
+          <!--fechar tab -->
+
+  </div>
+  <div class="tab-pane fade" id="aentregar">...</div>
+  <div class="tab-pane fade" id="entregue">...</div>
+  <div class="tab-pane fade" id="paga">...</div>
+  <div class="tab-pane fade" id="anulada">...</div>
+  <div class="tab-pane fade" id="devolvida">...</div>
+</div>
+
+         
         </div>
       </div>
 
@@ -141,5 +165,12 @@ pages/clientes/view.php?codCliente=<?php echo $_smarty_tpl->tpl_vars['package']-
   <?php echo $_smarty_tpl->getSubTemplate ("common/js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 </body>
+
+<script>
+$(window).load(function(){
+   $('#tabs a[href="#aprocessar"]').tab('show');
+});
+   
+</script>
 </html>
 <?php }} ?>
