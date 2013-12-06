@@ -24,7 +24,7 @@
       </div>
 
       <div id="div_formSearch" class="col-lg-6">
-    <form id="formSearch" method="post" action="{$BASE_URL}actions/encomendas/search.php">
+    <form id="formSearch" method="post" action="{$BASE_URL}pages/encomendas/search_list.php" enctype="multipart/form-data">
       Codigo da encomenda: <input type="text" class="form-control" name="codEncomenda" pattern="\w*" />
       <br>
       Data do inicio: <input type="text" class="form-control" name="dateInit" placeholder="DD-MM-AAAA" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]{4}"/>
@@ -35,30 +35,28 @@
       Artigos:
       <br>
       <table>
-        <tr>
-          <td>
-            <input type="checkbox" value="Rosas" name="rosas"> Rosas
-          </td>
-          <td>
-            <input type="checkbox" value="Tulipas" name="tulipas"> Tulipas
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" value="Alecrim" name="alecrim"> Alecrim
-          </td>
-          <td>
-            <input type="checkbox" value="Tesoura de Podar" name="tesoura"> Tesoura de Podar
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" value="Adubo Floral" name="adubo"> Adubo Floral
-          </td>
-          <td>
-            <input type="checkbox" value="Criacao de Arranjos Florais" name="criacao"> Criacao de Arranjos Florais
-          </td>
-        </tr>
+		{foreach $artigos as $artigo}
+			{if $count == 0 || $count == ($third * $multi) || (($count - ($third * $multi)) < 1 && ($count - ($third * $multi)) > 0)}
+			<tr>
+				<td>
+					<input type="checkbox" name="{$artigo.codArtigo}"> {$artigo.descricaoArtigo} 
+				</td>
+				
+				{assign var=multi value=$multi+1}
+				
+			{elseif $count == ($third - 1) ||  ((($third * $multi) - $count) < 1 && (($third * $multi) - $count) > 0)}
+				<td>
+					<input type="checkbox" name="{$artigo.codArtigo}"> {$artigo.descricaoArtigo} 
+				</td>
+			</tr>
+			{else}
+				<td>
+					<input type="checkbox" name="{$artigo.codArtigo}"> {$artigo.descricaoArtigo} 
+				</td>
+			{/if}
+			
+			{assign var=count value=$count+1}
+		{/foreach}
       </table>
       <br>
       Morada: <input type="text" class="form-control" name="address"/>

@@ -15,7 +15,8 @@
 
         //echo '<pre>';print_r($user);exit;
 
-        $packages = $user['m_Item2'];
+        $packagesAux = $user['m_Item2'];
+		$packages = array_reverse($packagesAux);
         $graph_data = array('-' => 0);
         $graph_data_2 = array('-' => 0);
         $totalGasto = 0;

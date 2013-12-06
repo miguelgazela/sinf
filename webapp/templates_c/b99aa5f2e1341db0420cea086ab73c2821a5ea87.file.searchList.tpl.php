@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-02 00:26:32
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:10:59
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\searchList.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9125529a3513eb11e4-40292180%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b99aa5f2e1341db0420cea086ab73c2821a5ea87' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\searchList.tpl',
-      1 => 1385940382,
+      1 => 1386364207,
       2 => 'file',
     ),
   ),
@@ -111,7 +111,7 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
 </h4>
                 <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
                 <?php }else{ ?>
-                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['Estado'];?>
+                <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['estadoEntrega'];?>
 </h4>
                 <p><span class="glyphicon glyphicon-question-sign"></span> estado</p>
                 <?php }?>

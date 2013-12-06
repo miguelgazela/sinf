@@ -18,14 +18,14 @@
   </form>
 
   <div class="list-group">
-    <a href="{$BASE_URL}pages/encomendas/list.php" class="list-group-item {if $type == 'active'}active{/if}">
+    <a href="{$BASE_URL}pages/encomendas/list.php" class="list-group-item _list">
       <span class=".glyphicon .glyphicon-list"></span>
       <span class="glyphicon glyphicon-list"></span> Encomendas Ativas
       {if isset($counterEncomendasAtivas) and count($counterEncomendasAtivas) > 0}
         <span class="badge pull-right">{$counterEncomendasAtivas}</span>
       {/if}
     </a>
-    <a href="{$BASE_URL}pages/encomendas/historic.php" class="list-group-item {if $type == 'inactive'}active{/if}">
+    <a href="{$BASE_URL}pages/encomendas/historic.php" class="list-group-item _history">
       <span class="glyphicon glyphicon-check"></span> Histórico
     </a>
     <a href="{$BASE_URL}pages/encomendas/search.php" class="list-group-item _search">

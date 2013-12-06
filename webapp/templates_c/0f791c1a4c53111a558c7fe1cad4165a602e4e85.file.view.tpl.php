@@ -1,25 +1,26 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:19:21
-         compiled from "C:\xampp\htdocs\webapp\templates\clientes\view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:493529c4c93267e64-49289255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:10:15
+         compiled from "C:\xampp\htdocs\webapp\templates\auth\view.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:6903529bb4acc344f1-47264511%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '45488aa03e59929dfd7bdc93d3626d8f5e188385' => 
+    '0f791c1a4c53111a558c7fe1cad4165a602e4e85' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\webapp\\templates\\clientes\\view.tpl',
-      1 => 1386364756,
+      0 => 'C:\\xampp\\htdocs\\webapp\\templates\\auth\\view.tpl',
+      1 => 1385942195,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '493529c4c93267e64-49289255',
+  'nocache_hash' => '6903529bb4acc344f1-47264511',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.13',
-  'unifunc' => 'content_529c4c932b21f9_86650656',
+  'unifunc' => 'content_529bb4accfb8a3_35492438',
   'variables' => 
   array (
     'user' => 0,
+    'typeUser' => 0,
     'totalEncomendas' => 0,
     'totalGasto' => 0,
     'graph_data_keys' => 0,
@@ -28,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_529c4c932b21f9_86650656')) {function content_529c4c932b21f9_86650656($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_529bb4accfb8a3_35492438')) {function content_529bb4accfb8a3_35492438($_smarty_tpl) {?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </head>
 
-<body>
+<body class="_profile">
   <div class="row">
 
     <?php echo $_smarty_tpl->getSubTemplate ("sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -78,8 +79,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
       <div class="page-header">
         <h1><span class="glyphicon glyphicon-user"></span> <?php echo $_smarty_tpl->tpl_vars['user']->value['NomeCliente'];?>
- <small>código cliente: <?php echo $_smarty_tpl->tpl_vars['user']->value['CodCliente'];?>
-</small> </h1>
+ <?php if ($_smarty_tpl->tpl_vars['typeUser']->value!="MANAGER"){?><small>código cliente: <?php echo $_smarty_tpl->tpl_vars['user']->value['CodCliente'];?>
+</small><?php }?></h1>
       </div>
 
       <div class="row">
@@ -88,7 +89,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="info">
             <p>Número de contribuinte: <?php echo $_smarty_tpl->tpl_vars['user']->value['NumContribuinte'];?>
 </p>
-            <h5>Morada:</h5>
+            <?php if ($_smarty_tpl->tpl_vars['typeUser']->value!="MANAGER"){?>
+            <h5>Morada</h5>
             <address>
               <?php echo $_smarty_tpl->tpl_vars['user']->value['Morada'];?>
 <br>
@@ -98,6 +100,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <abbr title="Telefone">Tlf:</abbr> <?php echo $_smarty_tpl->tpl_vars['user']->value['Telefone'];?>
 
             </address>
+            <?php }else{ ?>
+            <br>
+            <?php }?>
           </div>
           
         </div>

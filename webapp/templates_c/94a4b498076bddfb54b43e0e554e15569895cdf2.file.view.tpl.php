@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-02 08:59:01
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:14:15
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:25771529bb1b203f423-91164738%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94a4b498076bddfb54b43e0e554e15569895cdf2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\view.tpl',
-      1 => 1385974709,
+      1 => 1386364451,
       2 => 'file',
     ),
   ),
@@ -91,7 +91,7 @@ pages/clientes/view.php?codCliente=<?php echo $_smarty_tpl->tpl_vars['package']-
                 <p><span class="glyphicon glyphicon-calendar"></span> data pedido</p>
               </div>
               <div class="col-sm-3">
-                <?php if ($_smarty_tpl->tpl_vars['package']->value['estadoEntrega']!="a entregar"){?>
+                <?php if ($_smarty_tpl->tpl_vars['package']->value['estadoEntrega']=="entregue"||$_smarty_tpl->tpl_vars['package']->value['estadoEntrega']=="paga"){?>
                 <h4><?php echo $_smarty_tpl->tpl_vars['package']->value['DataFim'];?>
 </h4>
                 <p><span class="glyphicon glyphicon-calendar"></span> data entrega</p>
