@@ -9,21 +9,22 @@
 
     $packages = Null;
 
+    
         // temporary reading from JSON file
         // $file = $BASE_URL."tmp-data/encomendas.json";
         // $packages = json_decode(file_get_contents($file), true);
 
-        // calling our api
+         // calling our api
         $api_url = Null;
 
         if($_SESSION['s_userType'] == "CLIENT") {
-            $api_url = $BASE_URL_PRIMAVERA . 'encomendasactivas/'.$_SESSION['s_id'];
+            $api_url = $BASE_URL_PRIMAVERA . 'encomendasentregues/'.$_SESSION['s_id'];
         } else { // MANAGER
-            $api_url = $BASE_URL_PRIMAVERA . 'encomendasactivas';
+            $api_url = $BASE_URL_PRIMAVERA . 'encomendasentregues';
         }
-        
-        $packages = json_decode(file_get_contents($api_url), true);
 
+        $packages = json_decode(file_get_contents($api_url), true);
+    
 
 
     foreach($packages as &$package) {
@@ -39,8 +40,12 @@
 
 
     // send data to smarty and display it
+    if($_GET['type'] == "active") {
         $_SESSION['counterEncomendasAtivas'] = count($packages);
         $smarty->assign('counterEncomendasAtivas', count($packages));
+    } else {
+         $smarty->assign('counterEncomendasAtivas', $_SESSION['counterEncomendasAtivas']);
+    }
     $smarty->assign('packages', $packages);
-    $smarty->display('encomendas/list.tpl');
+    $smarty->display('encomendas/historic.tpl');
 ?>
