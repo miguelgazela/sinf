@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-03 10:44:33
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-08 18:20:44
          compiled from "C:\xampp\htdocs\webapp\templates\auth\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7635529b73c44957d8-50822242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f28f4b8764ef2860f1784330f77851a0a4e12b17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\auth\\login.tpl',
-      1 => 1385942195,
+      1 => 1386526843,
       2 => 'file',
     ),
   ),
@@ -38,9 +38,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body class="login">
-
+<table id="logintable">
+  <tr>
+  <td id="imagetd">
+   <img width="600" src="../../img/BelaFlor.png">
+   </td>
+  </tr>
+  <tr>
+  <td>
   <div class="container">
-    <h2 class="text-center">BelaFlor Log in</h2>
 
     <form role="form" id="login">
       <div class="form-group">
@@ -53,7 +59,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </div>
       <button id="loginButton" type="submit" class="btn btn btn-default pull-right">LOGIN</button>
     </form>
-  </div>
+  </div> 
+  </td>
+  </tr>
+</table>
+<footer id="footer">
+   <img width="500" src="../../img/primavera_logo.png">
+</footer>
   <?php echo $_smarty_tpl->getSubTemplate ("common/js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 </body>

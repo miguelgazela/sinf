@@ -16,9 +16,15 @@
 </head>
 
 <body class="login">
-
+<table id="logintable">
+  <tr>
+  <td id="imagetd">
+   <img width="600" src="../../img/BelaFlor.png">
+   </td>
+  </tr>
+  <tr>
+  <td>
   <div class="container">
-    <h2 class="text-center">BelaFlor Log in</h2>
 
     <form role="form" id="login">
       <div class="form-group">
@@ -31,7 +37,13 @@
       </div>
       <button id="loginButton" type="submit" class="btn btn btn-default pull-right">LOGIN</button>
     </form>
-  </div>
+  </div> 
+  </td>
+  </tr>
+</table>
+<footer id="footer">
+   <img width="500" src="../../img/primavera_logo.png">
+</footer>
   {include file="common/js.tpl"}
 </body>
 </html>

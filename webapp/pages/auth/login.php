@@ -3,7 +3,7 @@
     include_once('../../common/init.php');
 
     if(isset($_SESSION['s_id'])) {
-        header("Location: $BASE_URL"."pages/encomendas/list.php?type=active");
+        header("Location: $BASE_URL"."pages/encomendas/list.php");
         die();
     }
 
