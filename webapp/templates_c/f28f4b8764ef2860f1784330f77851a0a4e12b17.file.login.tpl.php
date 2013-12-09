@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 16:08:19
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 20:30:42
          compiled from "C:\xampp\htdocs\webapp\templates\auth\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7635529b73c44957d8-50822242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f28f4b8764ef2860f1784330f77851a0a4e12b17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\auth\\login.tpl',
-      1 => 1386604051,
+      1 => 1386621040,
       2 => 'file',
     ),
   ),
@@ -47,7 +47,10 @@ max-width: 300px;
 padding-top: 10px;
 border-radius: 15px;
 }
-
+#blackdude{
+  color: black;
+  
+}
 .form-group.last { margin-bottom:0px; }
 </style>
 
@@ -62,14 +65,15 @@ border-radius: 15px;
    </div>
    <div class="container" id="loginBox">
     <form role="form" id="login">
-    <div >
-    <span class="glyphicon glyphicon-lock"></span> Login</div>
+    <div id="blackdude">
+    <span class="glyphicon glyphicon-lock" ></span> Login </div>
+    <br/>
       <div class="form-group">
-        <label for="inputUsernameEmail">NIF</label>
+        <label for="inputUsernameEmail" id="blackdude">NIF</label>
         <input type="text" class="form-control" id="inputNif">
       </div>
       <div class="form-group">
-        <label for="inputPassword">Password</label>
+        <label for="inputPassword" id="blackdude">Password</label>
         <input type="password" class="form-control" id="inputPassword">
       </div>
       <button id="loginButton" type="submit" class="btn btn btn-default pull-right">LOGIN</button>

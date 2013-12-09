@@ -26,7 +26,10 @@ max-width: 300px;
 padding-top: 10px;
 border-radius: 15px;
 }
-
+#blackdude{
+  color: black;
+  
+}
 .form-group.last { margin-bottom:0px; }
 </style>
 
@@ -40,14 +43,15 @@ border-radius: 15px;
    </div>
    <div class="container" id="loginBox">
     <form role="form" id="login">
-    <div >
-    <span class="glyphicon glyphicon-lock"></span> Login</div>
+    <div id="blackdude">
+    <span class="glyphicon glyphicon-lock" ></span> Login </div>
+    <br/>
       <div class="form-group">
-        <label for="inputUsernameEmail">NIF</label>
+        <label for="inputUsernameEmail" id="blackdude">NIF</label>
         <input type="text" class="form-control" id="inputNif">
       </div>
       <div class="form-group">
-        <label for="inputPassword">Password</label>
+        <label for="inputPassword" id="blackdude">Password</label>
         <input type="password" class="form-control" id="inputPassword">
       </div>
       <button id="loginButton" type="submit" class="btn btn btn-default pull-right">LOGIN</button>
