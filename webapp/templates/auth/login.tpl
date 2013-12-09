@@ -9,24 +9,39 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-  <title>Signin Template for Bootstrap</title>
+<style type="text/css">
+  body { 
+  background: url(http://localhost/webapp/img/login.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#loginBox {
+  background-color: white;
+opacity: 0.8;
+padding-bottom: 10px;
+max-width: 300px;
+padding-top: 10px;
+border-radius: 15px;
+}
+
+.form-group.last { margin-bottom:0px; }
+</style>
 
   {include file="common/css.tpl"}
 
 </head>
 
 <body class="login">
-<table id="logintable">
-  <tr>
-  <td id="imagetd">
+  <div id="imagetd">
    <img width="600" src="../../img/BelaFlor.png">
-   </td>
-  </tr>
-  <tr>
-  <td>
-  <div class="container">
-
+   </div>
+   <div class="container" id="loginBox">
     <form role="form" id="login">
+    <div >
+    <span class="glyphicon glyphicon-lock"></span> Login</div>
       <div class="form-group">
         <label for="inputUsernameEmail">NIF</label>
         <input type="text" class="form-control" id="inputNif">
@@ -37,10 +52,8 @@
       </div>
       <button id="loginButton" type="submit" class="btn btn btn-default pull-right">LOGIN</button>
     </form>
-  </div> 
-  </td>
-  </tr>
-</table>
+  </div>
+
 <footer id="footer">
    <img width="500" src="../../img/primavera_logo.png">
 </footer>

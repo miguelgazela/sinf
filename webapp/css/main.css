@@ -9,7 +9,7 @@ html {
 html, body {
   height: 100%;
 }
-
+/*
 .login {
   background-color: #77cc33;
 }
@@ -22,7 +22,7 @@ html, body {
   top: 0; left: 0; bottom: 0; right: 0;
   position: relative;
 }
-
+*/
 #imagetd{
   text-align: center;
 }
@@ -36,19 +36,20 @@ html, body {
   padding-bottom: 10px;
   padding-top: 10px;
 }
-
+/*
 .login .container {
   max-width: 320px;
   margin: 0 auto;
   color: #fff;
-  /*padding-top: 80px;*/
   text-align: center;
 }
+*/
 /*
 .login form {
   margin-top: 40px;
 }
 */
+/*
 .login form input {
   background-color: #77cc33;
   border: 2px solid #fff;
@@ -73,7 +74,7 @@ html, body {
   background-color: #fff;
   color: #77cc33;
 }
-
+*/
 .row {
   margin: 0;
   min-height: 100%;

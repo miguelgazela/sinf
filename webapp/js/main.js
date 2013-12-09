@@ -41,7 +41,7 @@ $(document).ready(function(){
 
                     if(data.result == "OK") {
                         // redirect to encomendas ativas
-                        window.location = BASE_URL + "pages/encomendas/list.php?type=active";
+                        window.location = BASE_URL + "pages/encomendas/list.php";
                     } else {
                         // show error message
                         alert('Dados incorrectos!');

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 10:32:02
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 15:39:42
          compiled from "C:\xampp\htdocs\webapp\templates\auth\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7635529b73c44957d8-50822242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f28f4b8764ef2860f1784330f77851a0a4e12b17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\auth\\login.tpl',
-      1 => 1386527136,
+      1 => 1386603579,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <meta name="author" content="">
   <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-  <title>Signin Template for Bootstrap</title>
+<style type="text/css">
+  body { 
+  background: url(http://localhost/webapp/img/login.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#loginBox {
+  background-color: white;
+opacity: 0.8;
+padding-bottom: 10px;
+max-width: 300px;
+padding-top: 10px;
+border-radius: 15px;
+}
+
+.form-group.last { margin-bottom:0px; }
+</style>
 
   <?php echo $_smarty_tpl->getSubTemplate ("common/css.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -38,17 +57,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body class="login">
-<table id="logintable">
-  <tr>
-  <td id="imagetd">
+  <div id="imagetd">
    <img width="600" src="../../img/BelaFlor.png">
-   </td>
-  </tr>
-  <tr>
-  <td>
-  <div class="container">
-
+   </div>
+   <div class="container" id="loginBox">
     <form role="form" id="login">
+    <div >
+    <span class="glyphicon glyphicon-lock"></span> Login</div>
       <div class="form-group">
         <label for="inputUsernameEmail">NIF</label>
         <input type="text" class="form-control" id="inputNif">
@@ -59,10 +74,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       </div>
       <button id="loginButton" type="submit" class="btn btn btn-default pull-right">LOGIN</button>
     </form>
-  </div> 
-  </td>
-  </tr>
-</table>
+  </div>
+
 <footer id="footer">
    <img width="500" src="../../img/primavera_logo.png">
 </footer>

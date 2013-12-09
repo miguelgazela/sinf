@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-08 16:24:08
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 12:38:18
          compiled from "C:\xampp\htdocs\webapp\templates\sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5915529a34e93f9349-81505704%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48bacbeeba11294aef8175f3555d10fae678c028' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\sidebar.tpl',
-      1 => 1386519432,
+      1 => 1386588555,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
   <div class="media">
     <a class="pull-left" href="#">
-      <img class="media-object" src="http://placehold.it/64x64" alt="...">
+      <img class="media-object" src="../../img/profile.png" width="64" height="64">
     </a>
     <div class="media-body">
       <h4 class="media-heading"><?php echo $_smarty_tpl->tpl_vars['s_nome']->value;?>
