@@ -56,12 +56,17 @@ $(document).ready(function(){
         // console.log($(this).attr('data-package-id'));
         window.location = BASE_URL+'pages/encomendas/view.php?id='+$(this).attr('data-package-id');
     });
+	
+	 $('.packageDev').click(function(){
+        // console.log($(this).attr('data-package-id'));
+        window.location = BASE_URL+'pages/encomendas/viewDev.php?id='+$(this).attr('data-package-id');
+    });
 });
 
 function narrowResults(input) {
     var text = $(input).val().trim().toLowerCase();
 
-    $('.package').each(function(){
+    $('.package, .packageDev').each(function(){
         if(text === '') {
             $(this).show();
         } else {

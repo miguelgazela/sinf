@@ -2,7 +2,7 @@
 <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
   <div class="media">
     <a class="pull-left" href="#">
-      <img class="media-object" src="../../img/profile.png" width="64" height="64">
+      <img class="media-object" src="http://placehold.it/64x64" alt="...">
     </a>
     <div class="media-body">
       <h4 class="media-heading">{$s_nome}</h4>
@@ -26,7 +26,10 @@
       {/if}
     </a>
     <a href="{$BASE_URL}pages/encomendas/historic.php" class="list-group-item _history">
-      <span class="glyphicon glyphicon-check"></span> Histórico
+      <span class="glyphicon glyphicon-check"></span> Encomendas Entregues
+    </a>
+	<a href="{$BASE_URL}pages/encomendas/devolutions.php" class="list-group-item _devolutions">
+      <span class="glyphicon glyphicon-repeat"></span> Devoluções
     </a>
     <a href="{$BASE_URL}pages/encomendas/search.php" class="list-group-item _search">
       <span class="glyphicon glyphicon-search"></span> Pesquisa Avançada

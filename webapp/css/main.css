@@ -9,7 +9,7 @@ html {
 html, body {
   height: 100%;
 }
-/*
+
 .login {
   background-color: #77cc33;
 }
@@ -22,7 +22,7 @@ html, body {
   top: 0; left: 0; bottom: 0; right: 0;
   position: relative;
 }
-*/
+
 #imagetd{
   text-align: center;
 }
@@ -36,20 +36,19 @@ html, body {
   padding-bottom: 10px;
   padding-top: 10px;
 }
-/*
+
 .login .container {
   max-width: 320px;
   margin: 0 auto;
   color: #fff;
+  /*padding-top: 80px;*/
   text-align: center;
 }
-*/
 /*
 .login form {
   margin-top: 40px;
 }
 */
-/*
 .login form input {
   background-color: #77cc33;
   border: 2px solid #fff;
@@ -74,7 +73,7 @@ html, body {
   background-color: #fff;
   color: #77cc33;
 }
-*/
+
 .row {
   margin: 0;
   min-height: 100%;
@@ -153,7 +152,8 @@ body._calendar .list-group-item._calendar,
 body._profile .list-group-item._profile,
 body._list .list-group-item._list,
 body._history .list-group-item._history,
-body._suggestion .list-group-item._suggestion
+body._suggestion .list-group-item._suggestion,
+body._devolutions .list-group-item._devolutions
  {
   background-color: #77cc33;
   color: #fff;
@@ -265,19 +265,22 @@ body._suggestion .list-group-item._suggestion
   transition: all 0.2s linear;*/
 }
 
-.package, .product {
+.package, .product, .packageDev {
   border: 1px solid #E9E8E3;
   margin-bottom: 15px;
   color: #75767D;
+  cursor:pointer;
 }
 
 .package-header,
-.product-header {
+.product-header,
+.packageDev-header {
   background-color: #F8F8F8;
 }
 
 .package-header h5,
-.product-header h5 {
+.product-header h5,
+.packageDev-header {
   padding: 10px;
   margin-top: 0;
   color: inherit;
@@ -285,7 +288,8 @@ body._suggestion .list-group-item._suggestion
 }
 
 .package-footer,
-.product-footer {
+.product-footer,
+.packageDev-footer {
   text-align: center;
   border-top: 1px solid #E9E8E3;
   padding: 6px;

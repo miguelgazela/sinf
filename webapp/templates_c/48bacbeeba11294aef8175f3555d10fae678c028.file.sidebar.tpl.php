@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 12:38:18
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 16:09:03
          compiled from "C:\xampp\htdocs\webapp\templates\sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5915529a34e93f9349-81505704%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48bacbeeba11294aef8175f3555d10fae678c028' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\sidebar.tpl',
-      1 => 1386588555,
+      1 => 1386604500,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
   <div class="media">
     <a class="pull-left" href="#">
-      <img class="media-object" src="../../img/profile.png" width="64" height="64">
+      <img class="media-object" src="http://placehold.it/64x64" alt="...">
     </a>
     <div class="media-body">
       <h4 class="media-heading"><?php echo $_smarty_tpl->tpl_vars['s_nome']->value;?>
@@ -61,7 +61,11 @@ pages/encomendas/list.php" class="list-group-item _list">
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/encomendas/historic.php" class="list-group-item _history">
-      <span class="glyphicon glyphicon-check"></span> Histórico
+      <span class="glyphicon glyphicon-check"></span> Encomendas Entregues
+    </a>
+	<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/encomendas/devolutions.php" class="list-group-item _devolutions">
+      <span class="glyphicon glyphicon-repeat"></span> Devoluções
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/encomendas/search.php" class="list-group-item _search">
