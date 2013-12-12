@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 18:21:56
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-12 22:03:57
          compiled from "C:\xampp\htdocs\webapp\templates\sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5915529a34e93f9349-81505704%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48bacbeeba11294aef8175f3555d10fae678c028' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\sidebar.tpl',
-      1 => 1386612521,
+      1 => 1386885831,
       2 => 'file',
     ),
   ),
@@ -72,7 +72,7 @@ pages/encomendas/search.php" class="list-group-item _search">
       <span class="glyphicon glyphicon-search"></span> Pesquisa Avançada
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/calendar.php" class="list-group-item _calendar">
+pages/encomendas/calendar.php" class="list-group-item _calendar">
       <span class="glyphicon glyphicon-calendar"></span> Calendário
     </a>
 	<?php if ($_smarty_tpl->tpl_vars['typeUser']->value=="CLIENT"){?>

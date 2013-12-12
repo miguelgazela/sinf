@@ -34,7 +34,7 @@
     <a href="{$BASE_URL}pages/encomendas/search.php" class="list-group-item _search">
       <span class="glyphicon glyphicon-search"></span> Pesquisa Avançada
     </a>
-    <a href="{$BASE_URL}pages/calendar.php" class="list-group-item _calendar">
+    <a href="{$BASE_URL}pages/encomendas/calendar.php" class="list-group-item _calendar">
       <span class="glyphicon glyphicon-calendar"></span> Calendário
     </a>
 	{if $typeUser == "CLIENT"}

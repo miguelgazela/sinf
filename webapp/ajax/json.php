@@ -72,7 +72,6 @@ $array2 = array(
   )
 );
 
-header('Content-Type: application/json');
-echo json_encode($array);
+echo json_encode($array2);
 exit;
 ?>
