@@ -17,6 +17,8 @@
         $package = json_decode(file_get_contents($api_url), true);
         $package['perEntrega'] = round($package['perEntrega']+0);
         $package['numProdutos'] = count($package['ListaArtigos']);
+		$package['DataInicio'] = UtilFunctions::prettyDate($package['DataInicio']);
+		$package['DataFim'] = UtilFunctions::prettyDate($package['DataFim']);
         $products = $package['ListaArtigos'];
 
         // send data to smarty and display template

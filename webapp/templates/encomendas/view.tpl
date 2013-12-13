@@ -75,6 +75,12 @@
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {$package.perEntrega}%;">
             </div>
           </div>
+		  
+		  {if $package.estadoEntrega == 'nao paga'}
+		  <div id="pagamento">
+			<h4> Data de pagamento: {$package.DataVencimento} </h4>
+		</div>
+		  {/if}
 
           <h4>Produtos:</h4>
           {foreach $products as $product name=foo}

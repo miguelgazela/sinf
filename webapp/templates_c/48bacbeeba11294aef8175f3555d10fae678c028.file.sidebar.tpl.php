@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-12 22:03:57
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-13 16:04:24
          compiled from "C:\xampp\htdocs\webapp\templates\sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5915529a34e93f9349-81505704%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '48bacbeeba11294aef8175f3555d10fae678c028' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\sidebar.tpl',
-      1 => 1386885831,
+      1 => 1386950651,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'data' => 0,
     'BASE_URL' => 0,
     'counterEncomendasAtivas' => 0,
+    'counterEncomendasEntregues' => 0,
+    'counterEncomendasDevolvidas' => 0,
     'typeUser' => 0,
   ),
   'has_nocache_code' => false,
@@ -62,10 +64,18 @@ pages/encomendas/list.php" class="list-group-item _list">
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/encomendas/historic.php" class="list-group-item _history">
       <span class="glyphicon glyphicon-check"></span> Encomendas Entregues
+	  <?php if (isset($_smarty_tpl->tpl_vars['counterEncomendasEntregues']->value)&&count($_smarty_tpl->tpl_vars['counterEncomendasEntregues']->value)>0){?>
+        <span class="badge pull-right"><?php echo $_smarty_tpl->tpl_vars['counterEncomendasEntregues']->value;?>
+</span>
+      <?php }?>
     </a>
 	<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/encomendas/devolutions.php" class="list-group-item _devolutions">
       <span class="glyphicon glyphicon-repeat"></span> Devoluções
+	  <?php if (isset($_smarty_tpl->tpl_vars['counterEncomendasDevolvidas']->value)&&count($_smarty_tpl->tpl_vars['counterEncomendasDevolvidas']->value)>0){?>
+        <span class="badge pull-right"><?php echo $_smarty_tpl->tpl_vars['counterEncomendasDevolvidas']->value;?>
+</span>
+      <?php }?>
     </a>
     <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/encomendas/search.php" class="list-group-item _search">

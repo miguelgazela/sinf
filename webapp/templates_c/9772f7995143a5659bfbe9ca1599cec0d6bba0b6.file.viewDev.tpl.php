@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 17:07:17
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-13 15:07:48
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\viewDev.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2645952a5f7079d7be2-70068226%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9772f7995143a5659bfbe9ca1599cec0d6bba0b6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\viewDev.tpl',
-      1 => 1386608688,
+      1 => 1386947207,
       2 => 'file',
     ),
   ),
@@ -146,7 +146,7 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
                 <div class="col-sm-3">
                   <h4><?php echo $_smarty_tpl->tpl_vars['product']->value['ratingEntrega'];?>
 </h4>
-                  <p><span class="glyphicon glyphicon-ok"></span> entregue</p>
+                  <p><span class="glyphicon glyphicon-ok"></span> estado dos artigos</p>
 
                 </div>
               </div> <!-- product-footer -->

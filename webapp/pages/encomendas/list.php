@@ -87,7 +87,6 @@
 
     // send data to smarty and display it
     $_SESSION['counterEncomendasAtivas'] =  count($packages_anuladas) +  count($packages_aentregar) + count($packages_processamento);
-    $smarty->assign('counterEncomendasAtivas', count($packages_anuladas) + count($packages_aentregar) + count($packages_processamento));
 	$smarty->assign('packages_anuladas', $packages_anuladas);
 	$smarty->assign('packages_processamento', $packages_processamento);
 	$smarty->assign('packages_aentregar', $packages_aentregar);

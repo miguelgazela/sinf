@@ -49,6 +49,7 @@
         <div class="col-sm-12 col-md-12 packages">
           <h2>Resultados da pesquisa</h2>
           <br>
+		  {if count($packages) > 0}
           {foreach $packages as $package}
           <div class="package" data-package-id="{$package.codEncomenda}">
             <div class="package-header">
@@ -85,6 +86,9 @@
             <!-- <button type="button" class="btn btn-default btn-sm" data-package-id="{$package.id}">ver detalhes</button> -->
           </div>
           {/foreach}
+		  {else}
+			<h4> Não foram encontrados resultados... </h4>
+		{/if}
         </div>
       </div>
 

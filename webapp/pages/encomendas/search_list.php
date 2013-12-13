@@ -86,8 +86,15 @@
 	$start = $start . $preco . '___';
 	
 	// Tratar da morada
-	$morada = $_POST['address'];
-	if($morada == "")
+	if($_SESSION['s_userType'] == 'MANAGER')
+	{
+		$morada = $_POST['address'];
+		if($morada == "")
+		{
+			$morada = "none";
+		}
+	}
+	else
 	{
 		$morada = "none";
 	}
@@ -105,7 +112,11 @@
 		$quant = "" . $quantAux . "";
 	}
 	
-	$startAux = $start . $quant;
+	$start = $start . $quant;
+	
+	//Tratar do estado da encomenda
+	$state = $_POST['state'];
+	$startAux = $start . '___' . $state;
 	$start = str_replace(' ', '________', $startAux);
 
     $api_url = null;

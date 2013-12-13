@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 12:38:23
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-13 16:38:16
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11676529a3501cb1414-91412251%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1aed1faec74482aa161fc177c9fabe41673c3a18' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\search.tpl',
-      1 => 1386582008,
+      1 => 1386952692,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'third' => 0,
     'multi' => 0,
     'artigo' => 0,
+    'typeUser' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -103,10 +104,23 @@ $_smarty_tpl->tpl_vars['artigo']->_loop = true;
 			<?php $_smarty_tpl->tpl_vars['count'] = new Smarty_variable($_smarty_tpl->tpl_vars['count']->value+1, null, 0);?>
 		<?php } ?>
       </table>
+	  <?php if ($_smarty_tpl->tpl_vars['typeUser']->value=='MANAGER'){?>
       <br>
       Morada: <input type="text" class="form-control" name="address"/>
+	  <?php }?>
       <br>
       Quantidade: <input type="number" class="form-control" name="quantidade" min="1" max="20"/>
+	  <br>
+	  Estado da entrega:
+	  <select name="state" class="form-control">
+		<option value="none">Não especifico</option>
+		<option value="a processar">A processar</option>
+		<option value="a entregar">A entregar</option>
+		<option value="anulada">Anulada</option>
+		<option value="entregue">Entregue</option>
+		<option value="paga">Paga</option>
+		<option value="nao paga"> Não Paga </option>
+	</select>
       <br>
       <br>
       <input type="submit" class="btn btn-default" value="Procurar"/>

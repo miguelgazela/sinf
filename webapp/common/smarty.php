@@ -28,8 +28,11 @@
     $smarty->assign("s_nome", $_SESSION['s_nome']);
     $smarty->assign('typeUser', $_SESSION['s_userType']);
     $smarty->assign('s_nif', $_SESSION['s_nif']);
+	$smarty->assign('counterEncomendasAtivas', $_SESSION['counterEncomendasAtivas']);
+	$smarty->assign('counterEncomendasEntregues', $_SESSION['counterEncomendasEntregues']);
+	$smarty->assign('counterEncomendasDevolvidas', $_SESSION['counterEncomendasDevolvidas']);
     $smarty->assign('data', date("d M Y H:i", strtotime('now')));
-    
+
     //$_SESSION['session_id'] = null;
     //$_SESSION['s_username'] = null;
     //$_SESSION['s_typeUser'] = null;

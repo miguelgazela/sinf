@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-sm-3">
                   <h4>{$product.ratingEntrega}</h4>
-                  <p><span class="glyphicon glyphicon-ok"></span> entregue</p>
+                  <p><span class="glyphicon glyphicon-ok"></span> estado dos artigos</p>
 
                 </div>
               </div> <!-- product-footer -->

@@ -58,10 +58,23 @@
 			{assign var=count value=$count+1}
 		{/foreach}
       </table>
+	  {if $typeUser == 'MANAGER'}
       <br>
       Morada: <input type="text" class="form-control" name="address"/>
+	  {/if}
       <br>
       Quantidade: <input type="number" class="form-control" name="quantidade" min="1" max="20"/>
+	  <br>
+	  Estado da entrega:
+	  <select name="state" class="form-control">
+		<option value="none">Não especifico</option>
+		<option value="a processar">A processar</option>
+		<option value="a entregar">A entregar</option>
+		<option value="anulada">Anulada</option>
+		<option value="entregue">Entregue</option>
+		<option value="paga">Paga</option>
+		<option value="nao paga"> Não Paga </option>
+	</select>
       <br>
       <br>
       <input type="submit" class="btn btn-default" value="Procurar"/>

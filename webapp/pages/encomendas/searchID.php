@@ -10,9 +10,9 @@
     $api_url = null;
 
      if($_SESSION['s_userType'] == "CLIENT") {
-            $api_url = 'http://localhost:49499/api/pesquisaavanencomendas/'.$_SESSION['s_id'].'/' . $_GET['searchIDInput'] . '___none___none___none___none___none___none';
+            $api_url = 'http://localhost:49499/api/pesquisaavanencomendas/'.$_SESSION['s_id'].'/' . $_GET['searchIDInput'] . '___none___none___none___none___none___none___none';
         } else { // MANAGER
-            $api_url = 'http://localhost:49499/api/pesquisaavanencomendas/' . $_GET['searchIDInput']. '___none___none___none___none___none___none';
+            $api_url = 'http://localhost:49499/api/pesquisaavanencomendas/' . $_GET['searchIDInput']. '___none___none___none___none___none___none___none';
         }
 	
 	//echo($api_url);

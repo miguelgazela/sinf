@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-06 21:10:59
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-13 17:03:10
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\searchList.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9125529a3513eb11e4-40292180%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b99aa5f2e1341db0420cea086ab73c2821a5ea87' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\searchList.tpl',
-      1 => 1386364207,
+      1 => 1386954170,
       2 => 'file',
     ),
   ),
@@ -80,6 +80,7 @@ css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <div class="col-sm-12 col-md-12 packages">
           <h2>Resultados da pesquisa</h2>
           <br>
+		  <?php if (count($_smarty_tpl->tpl_vars['packages']->value)>0){?>
           <?php  $_smarty_tpl->tpl_vars['package'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['package']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['packages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['package']->key => $_smarty_tpl->tpl_vars['package']->value){
@@ -132,6 +133,9 @@ $_smarty_tpl->tpl_vars['package']->_loop = true;
 ">ver detalhes</button> -->
           </div>
           <?php } ?>
+		  <?php }else{ ?>
+			<h4> Não foram encontrados resultados... </h4>
+		<?php }?>
         </div>
       </div>
 

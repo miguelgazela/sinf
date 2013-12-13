@@ -27,9 +27,15 @@
     </a>
     <a href="{$BASE_URL}pages/encomendas/historic.php" class="list-group-item _history">
       <span class="glyphicon glyphicon-check"></span> Encomendas Entregues
+	  {if isset($counterEncomendasEntregues) and count($counterEncomendasEntregues) > 0}
+        <span class="badge pull-right">{$counterEncomendasEntregues}</span>
+      {/if}
     </a>
 	<a href="{$BASE_URL}pages/encomendas/devolutions.php" class="list-group-item _devolutions">
       <span class="glyphicon glyphicon-repeat"></span> Devoluções
+	  {if isset($counterEncomendasDevolvidas) and count($counterEncomendasDevolvidas) > 0}
+        <span class="badge pull-right">{$counterEncomendasDevolvidas}</span>
+      {/if}
     </a>
     <a href="{$BASE_URL}pages/encomendas/search.php" class="list-group-item _search">
       <span class="glyphicon glyphicon-search"></span> Pesquisa Avançada

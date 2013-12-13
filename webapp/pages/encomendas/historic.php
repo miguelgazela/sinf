@@ -134,6 +134,7 @@
 
 
     // send data to smarty and display it
+	$_SESSION['counterEncomendasEntregues'] =  count($packages_entregues);
     $smarty->assign('packages_entregues', $packages_entregues);
 	$smarty->assign('packages_pagas', $packages_pagas);
 	$smarty->assign('packages_nao_pagas', $packages_nao_pagas);

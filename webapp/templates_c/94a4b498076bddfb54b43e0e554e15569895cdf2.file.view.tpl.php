@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-09 14:48:34
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-13 15:44:48
          compiled from "C:\xampp\htdocs\webapp\templates\encomendas\view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:25771529bb1b203f423-91164738%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94a4b498076bddfb54b43e0e554e15569895cdf2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\webapp\\templates\\encomendas\\view.tpl',
-      1 => 1386582008,
+      1 => 1386949481,
       2 => 'file',
     ),
   ),
@@ -122,6 +122,13 @@ pages/clientes/view.php?codCliente=<?php echo $_smarty_tpl->tpl_vars['package']-
 %;">
             </div>
           </div>
+		  
+		  <?php if ($_smarty_tpl->tpl_vars['package']->value['estadoEntrega']=='nao paga'){?>
+		  <div id="pagamento">
+			<h4> Data de pagamento: <?php echo $_smarty_tpl->tpl_vars['package']->value['DataVencimento'];?>
+ </h4>
+		</div>
+		  <?php }?>
 
           <h4>Produtos:</h4>
           <?php  $_smarty_tpl->tpl_vars['product'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['product']->_loop = false;
