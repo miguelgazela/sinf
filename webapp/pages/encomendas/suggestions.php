@@ -9,6 +9,8 @@
 	
 	$api_url = $BASE_URL_PRIMAVERA . 'historico/'.$_SESSION['s_id'];
 	$artigos = json_decode(file_get_contents($api_url), true);
+
+    $smarty->assign('artigos', $artigos);
 	
 	$smarty->display('encomendas/suggestions.tpl');
 ?>
