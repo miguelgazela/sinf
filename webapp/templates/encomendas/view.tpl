@@ -95,7 +95,11 @@
                 </div>
                 <div class="col-sm-3">
                   <h4>{$product.quantidade}{$product.unidade}</h4>
+				  {if $package.estadoEntrega == "nao facturada"}
+                  <p><span class="glyphicon glyphicon-th-large"></span> quantidade a facturar</p>
+				  {else}
                   <p><span class="glyphicon glyphicon-th-large"></span> quantidade</p>
+				  {/if}
                 </div>
                 <div class="col-sm-3">
                   <h4>{$product.totalLiquido}€</h4>
