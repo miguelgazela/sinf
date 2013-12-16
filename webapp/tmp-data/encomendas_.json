@@ -1,0 +1,141 @@
+[
+    {
+        "id": "{702F4F42-1C57-11E3-8FD6-0800276FC947}",
+        "Entidade": "VD",
+        "NumDoc": 1,
+        "DataInicio": "2013-09-13T19:23:00",
+        "DataFim": "2013-09-13T00:00:00",
+        "TotalMerc": 14,
+        "Serie": "2013",
+        "LinhasDoc": [
+            {
+                "Id": "{76339C48-1C57-11E3-8FD6-0800276FC947}",
+                "IdCabecDoc": "{702F4F42-1C57-11E3-8FD6-0800276FC947}",
+                "CodArtigo": "DV.0001",
+                "DescArtigo": "Criação de Arranjos Florais",
+                "Quantidade": 1,
+                "Unidade": "UN",
+                "Desconto": 0,
+                "PrecoUnitario": 14,
+                "TotalILiquido": 14,
+                "TotalLiquido": 14,
+                "Entregue": "P",
+                "DataEntrega": "2013-09-13T19:23:00"
+            }
+        ]
+    },
+    {
+        "id": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+        "Entidade": "0003",
+        "NumDoc": 2,
+        "DataInicio": "2013-09-13T00:00:00",
+        "DataFim": "2013-09-13T00:00:00",
+        "TotalMerc": 70,
+        "Serie": "2013",
+        "LinhasDoc": [
+            {
+                "Id": "{9FA383E2-1C57-11E3-8FD6-0800276FC947}",
+                "IdCabecDoc": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+                "CodArtigo": "DV.0001",
+                "DescArtigo": "Criação de Arranjos Florais",
+                "Quantidade": 5,
+                "Unidade": "UN",
+                "Desconto": 0,
+                "PrecoUnitario": 14,
+                "TotalILiquido": 70,
+                "TotalLiquido": 70,
+                "Entregue": "P",
+                "DataEntrega": "2013-09-13T00:00:00"
+            }
+        ]
+    },
+    {
+        "id": "{7429B0C3-3A31-11E3-9CE0-080027808344}",
+        "Entidade": "0001",
+        "NumDoc": 3,
+        "DataInicio": "2013-10-21T00:00:00",
+        "DataFim": "2013-10-21T00:00:00",
+        "TotalMerc": 2.5,
+        "Serie": "2013",
+        "LinhasDoc": [
+            {
+                "Id": "{9AE032D7-3A31-11E3-9CE0-080027808344}",
+                "IdCabecDoc": "{7429B0C3-3A31-11E3-9CE0-080027808344}",
+                "CodArtigo": "FC.0001",
+                "DescArtigo": "Rosas",
+                "Quantidade": 1,
+                "Unidade": "UN",
+                "Desconto": 0,
+                "PrecoUnitario": 2.5,
+                "TotalILiquido": 2.5,
+                "TotalLiquido": 2.5,
+                "Entregue": "P",
+                "DataEntrega": "2013-10-21T00:00:00"
+            }
+        ]
+    },
+    {
+        "id": "{B804EB19-3A38-11E3-9CE0-080027808344}",
+        "Entidade": "0005",
+        "NumDoc": 5,
+        "DataInicio": "2013-10-21T00:00:00",
+        "DataFim": "2013-10-21T00:00:00",
+        "TotalMerc": 23.6,
+        "Serie": "2013",
+        "LinhasDoc": [
+            {
+                "Id": "{B804EB18-3A38-11E3-9CE0-080027808344}",
+                "IdCabecDoc": "{B804EB19-3A38-11E3-9CE0-080027808344}",
+                "CodArtigo": "FE.0001",
+                "DescArtigo": "Tesoura de Podar",
+                "Quantidade": 1,
+                "Unidade": "UN",
+                "Desconto": 0,
+                "PrecoUnitario": 15.6,
+                "TotalILiquido": 15.6,
+                "TotalLiquido": 15.6,
+                "Entregue": "P",
+                "DataEntrega": "2013-10-21T00:00:00"
+            },
+            {
+                "Id": "{2C7D8986-48A8-11E3-BCCA-000C2911C96C}",
+                "IdCabecDoc": "{B804EB19-3A38-11E3-9CE0-080027808344}",
+                "CodArtigo": "FC.0002",
+                "DescArtigo": "Tulipas",
+                "Quantidade": 4,
+                "Unidade": "UN",
+                "Desconto": 0,
+                "PrecoUnitario": 2,
+                "TotalILiquido": 8,
+                "TotalLiquido": 8,
+                "Entregue": "P",
+                "DataEntrega": "2013-10-21T00:00:00"
+            }
+        ]
+    },
+    {
+        "id": "{7F8117D8-3A38-11E3-9CE0-080027808344}",
+        "Entidade": "0004",
+        "NumDoc": 4,
+        "DataInicio": "2013-10-21T00:00:00",
+        "DataFim": "2013-10-21T00:00:00",
+        "TotalMerc": 50,
+        "Serie": "2013",
+        "LinhasDoc": [
+            {
+                "Id": "{69C9F3BD-3A38-11E3-9CE0-080027808344}",
+                "IdCabecDoc": "{7F8117D8-3A38-11E3-9CE0-080027808344}",
+                "CodArtigo": "TV.0001",
+                "DescArtigo": "Adubo Floral",
+                "Quantidade": 10,
+                "Unidade": "KG",
+                "Desconto": 0,
+                "PrecoUnitario": 5,
+                "TotalILiquido": 50,
+                "TotalLiquido": 50,
+                "Entregue": "P",
+                "DataEntrega": "2013-10-21T00:00:00"
+            }
+        ]
+    }
+]

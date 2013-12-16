@@ -1,0 +1,164 @@
+{
+    "m_Item1": {
+        "CodCliente": "0003",
+        "NomeCliente": "Adelino Lobo",
+        "NumContribuinte": "987456321",
+        "Moeda": "EUR",
+        "Morada": "Rua da Mesquita",
+        "Local": "Gondomar",
+        "Codigo_Postal": "4680-000",
+        "Telefone": "255879145"
+    },
+    "m_Item2": [
+        {
+            "idPrimaveraEncomenda": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+            "codCliente": "0003",
+            "codEncomenda": 2,
+            "DataInicio": "2013-09-13T00:00:00",
+            "DataFim": "2013-09-13T00:00:00",
+            "totalMerc": 70,
+            "serie": "2013",
+            "ListaArtigos": [
+                {
+                    "idPrimaveraArtigo": "{9FA383E2-1C57-11E3-8FD6-0800276FC947}",
+                    "idPrimaveraArtigo2": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+                    "codArtigo": "DV.0001",
+                    "descricaoArtigo": "Criação de Arranjos Florais",
+                    "quantidade": 5,
+                    "unidade": "UN",
+                    "desconto": 0,
+                    "precoUnitario": 14,
+                    "totalILiquido": 70,
+                    "totalLiquido": 70,
+                    "estadoEntrega": "P",
+                    "DataEntrega": "2013-09-13T00:00:00"
+                }
+            ]
+        },
+        {
+            "idPrimaveraEncomenda": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+            "codCliente": "0003",
+            "codEncomenda": 2,
+            "DataInicio": "2013-09-13T00:00:00",
+            "DataFim": "2013-09-13T00:00:00",
+            "totalMerc": 70,
+            "serie": "2013",
+            "ListaArtigos": [
+                {
+                    "idPrimaveraArtigo": "{9FA383E2-1C57-11E3-8FD6-0800276FC947}",
+                    "idPrimaveraArtigo2": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+                    "codArtigo": "DV.0001",
+                    "descricaoArtigo": "Criação de Arranjos Florais",
+                    "quantidade": 5,
+                    "unidade": "UN",
+                    "desconto": 0,
+                    "precoUnitario": 14,
+                    "totalILiquido": 70,
+                    "totalLiquido": 70,
+                    "estadoEntrega": "P",
+                    "DataEntrega": "2013-09-13T00:00:00"
+                }
+            ]
+        },
+        {
+            "idPrimaveraEncomenda": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+            "codCliente": "0003",
+            "codEncomenda": 2,
+            "DataInicio": "2013-08-13T00:00:00",
+            "DataFim": "2013-09-13T00:00:00",
+            "totalMerc": 70,
+            "serie": "2013",
+            "ListaArtigos": [
+                {
+                    "idPrimaveraArtigo": "{9FA383E2-1C57-11E3-8FD6-0800276FC947}",
+                    "idPrimaveraArtigo2": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+                    "codArtigo": "DV.0001",
+                    "descricaoArtigo": "Criação de Arranjos Florais",
+                    "quantidade": 5,
+                    "unidade": "UN",
+                    "desconto": 0,
+                    "precoUnitario": 14,
+                    "totalILiquido": 70,
+                    "totalLiquido": 70,
+                    "estadoEntrega": "P",
+                    "DataEntrega": "2013-09-13T00:00:00"
+                }
+            ]
+        },
+        {
+            "idPrimaveraEncomenda": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+            "codCliente": "0003",
+            "codEncomenda": 2,
+            "DataInicio": "2013-06-13T00:00:00",
+            "DataFim": "2013-09-13T00:00:00",
+            "totalMerc": 70,
+            "serie": "2013",
+            "ListaArtigos": [
+                {
+                    "idPrimaveraArtigo": "{9FA383E2-1C57-11E3-8FD6-0800276FC947}",
+                    "idPrimaveraArtigo2": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+                    "codArtigo": "DV.0001",
+                    "descricaoArtigo": "Criação de Arranjos Florais",
+                    "quantidade": 5,
+                    "unidade": "UN",
+                    "desconto": 0,
+                    "precoUnitario": 14,
+                    "totalILiquido": 70,
+                    "totalLiquido": 70,
+                    "estadoEntrega": "P",
+                    "DataEntrega": "2013-09-13T00:00:00"
+                }
+            ]
+        },
+        {
+            "idPrimaveraEncomenda": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+            "codCliente": "0003",
+            "codEncomenda": 2,
+            "DataInicio": "2012-12-13T00:00:00",
+            "DataFim": "2013-09-13T00:00:00",
+            "totalMerc": 70,
+            "serie": "2013",
+            "ListaArtigos": [
+                {
+                    "idPrimaveraArtigo": "{9FA383E2-1C57-11E3-8FD6-0800276FC947}",
+                    "idPrimaveraArtigo2": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+                    "codArtigo": "DV.0001",
+                    "descricaoArtigo": "Criação de Arranjos Florais",
+                    "quantidade": 5,
+                    "unidade": "UN",
+                    "desconto": 0,
+                    "precoUnitario": 14,
+                    "totalILiquido": 70,
+                    "totalLiquido": 70,
+                    "estadoEntrega": "P",
+                    "DataEntrega": "2013-09-13T00:00:00"
+                }
+            ]
+        },
+        {
+            "idPrimaveraEncomenda": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+            "codCliente": "0003",
+            "codEncomenda": 2,
+            "DataInicio": "2012-12-13T00:00:00",
+            "DataFim": "2013-09-13T00:00:00",
+            "totalMerc": 70,
+            "serie": "2013",
+            "ListaArtigos": [
+                {
+                    "idPrimaveraArtigo": "{9FA383E2-1C57-11E3-8FD6-0800276FC947}",
+                    "idPrimaveraArtigo2": "{82B05883-1C57-11E3-8FD6-0800276FC947}",
+                    "codArtigo": "DV.0001",
+                    "descricaoArtigo": "Criação de Arranjos Florais",
+                    "quantidade": 5,
+                    "unidade": "UN",
+                    "desconto": 0,
+                    "precoUnitario": 14,
+                    "totalILiquido": 70,
+                    "totalLiquido": 70,
+                    "estadoEntrega": "P",
+                    "DataEntrega": "2013-09-13T00:00:00"
+                }
+            ]
+        }
+    ]
+}
